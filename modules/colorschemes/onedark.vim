@@ -1,3 +1,1 @@
-lua << EOF
-	require('onedark').load()
-EOF
+require('onedark').load()
