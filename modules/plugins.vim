@@ -5,29 +5,28 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
 	Plug 'BurntSushi/ripgrep'
-	
-	" Intellisense 
+
+	" native lsp
 	Plug 'neovim/nvim-lspconfig'
+	
+	" autocomplete 
+	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'hrsh7th/cmp-buffer'
 	Plug 'hrsh7th/cmp-path'
-	Plug 'hrsh7th/cmp-cmdline'
-	Plug 'hrsh7th/nvim-cmp'
+
+	Plug 'preservim/nerdcommenter'
 	
 	" treesitter
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'nvim-treesitter/playground'
 	Plug 'romgrk/nvim-treesitter-context'
 	
-	" functionality
-	Plug 'preservim/nerdcommenter'
-	
 	" python
 	Plug 'vim-python/python-syntax'
 	
 	" layout
 	Plug 'itchyny/lightline.vim'
-	Plug 'lukas-reineke/indent-blankline.nvim'
 	
 	" git
 	Plug 'sindrets/diffview.nvim'
