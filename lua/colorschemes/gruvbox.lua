@@ -1,1 +1,1 @@
-require('gruvbox').load()
+vim.api.nvim_command('colorscheme gruvbox-material')
