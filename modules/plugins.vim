@@ -6,8 +6,9 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
 	Plug 'BurntSushi/ripgrep'
 
-	" native lsp
+	" lsp
 	Plug 'neovim/nvim-lspconfig'
+	Plug 'scalameta/nvim-metals'
 	
 	" autocomplete 
 	Plug 'hrsh7th/nvim-cmp'
