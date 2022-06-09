@@ -12,6 +12,7 @@ require('lspconfig').jedi_language_server.setup{
 		vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, {buffer=0})
 		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {buffer=0})
 		vim.keymap.set('n', '<space>df', vim.lsp.diagnostic.goto_next, {buffer=0})
+		vim.keymap.set('n', 'gr', vim.lsp.buf.references, {buffer=0})
 	end,
 }
 
@@ -37,8 +38,6 @@ cmp.setup {
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
       else
         fallback()
       end
@@ -46,8 +45,6 @@ cmp.setup {
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
       else
         fallback()
       end
@@ -55,6 +52,5 @@ cmp.setup {
   }),
   sources = {
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
   },
 }
