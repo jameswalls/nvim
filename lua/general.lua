@@ -30,3 +30,5 @@ vim.opt.cursorline = true
 --set termguicolors
 vim.opt.background = 'dark'
 
+-- scala: metals
+vim.opt_global.shortmess:remove("F")
