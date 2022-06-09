@@ -5,6 +5,6 @@ require('treesitter')
 require('colorschemes.gruvbox')
 require('telescope')
 require('metals_config')
+require('gitsigns_config')
 
 --vim.cmd('source $HOME/.config/nvim/modules/python.vim')
---vim.cmd('source $HOME/.config/nvim/modules/gitsigns.vim')
