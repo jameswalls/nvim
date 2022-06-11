@@ -3,7 +3,7 @@ require('general')
 require('lsp')
 require('treesitter')
 require('colorschemes.gruvbox')
-require('telescope')
+require('telescope_config')
 require('metals_config')
 require('gitsigns_config')
 

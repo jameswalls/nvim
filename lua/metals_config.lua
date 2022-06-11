@@ -1,3 +1,5 @@
+-- scala: metals
+vim.opt_global.shortmess:remove("F")
 local metals_config = require("metals").bare_config()
 local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
@@ -7,5 +9,3 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 	group = nvim_metals_group,
 })
-
-require("telescope").extensions.metals.commands()
