@@ -38,6 +38,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'jjpp109309/onedark.nvim'
 	Plug 'jjpp109309/vscode.nvim'
 	Plug 'sainnhe/gruvbox-material'
+	Plug 'arzg/vim-colors-xcode'
 call plug#end()
 
 

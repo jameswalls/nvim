@@ -3,6 +3,15 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
+-- lsp default keymappings
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer=0})
+vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, {buffer=0})
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {buffer=0})
+vim.keymap.set('n', '<space>df', vim.lsp.diagnostic.goto_next, {buffer=0})
+vim.keymap.set('n', 'gr', vim.lsp.buf.references, {buffer=0})
+
+
 -- python lsp configuration
 require('lspconfig').jedi_language_server.setup{
 	capabilities = capabilities,
