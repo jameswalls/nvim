@@ -12,3 +12,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 	group = nvim_metals_group,
 })
+
+-- telescope integration
+vim.keymap.set('n', '<leader>mc', '<cmd>Telescope metals commands<cr>')
