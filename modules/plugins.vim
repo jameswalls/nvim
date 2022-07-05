@@ -18,7 +18,10 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'hrsh7th/cmp-path'
 
 	Plug 'preservim/nerdcommenter'
-	
+
+	" debug adapter protocol
+	Plug 'mfussenegger/nvim-dap'
+
 	" treesitter
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'nvim-treesitter/playground'
@@ -36,7 +39,8 @@ call plug#begin('~/.nvim/plugged')
 	
 	" colorscheme
 	Plug 'jjpp109309/onedark.nvim'
-	Plug 'jjpp109309/vscode.nvim'
+	"Plug 'jjpp109309/vscode.nvim'
+	Plug 'Mofiqul/vscode.nvim'
 	Plug 'sainnhe/gruvbox-material'
 	Plug 'arzg/vim-colors-xcode'
 call plug#end()
