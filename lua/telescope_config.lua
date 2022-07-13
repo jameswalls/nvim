@@ -17,6 +17,7 @@ vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 vim.keymap.set('n', '<leader>gf', '<cmd>Telescope git_files<cr>')
 vim.keymap.set('n', '<leader>gs', '<cmd>Telescope grep_string<cr>')
 vim.keymap.set('n', '<leader>df', '<cmd>Telescope lsp_definitions<cr>')
+vim.keymap.set('n', '<leader>td', '<cmd>Telescope lsp_type_definitions<cr>')
 vim.keymap.set('n', '<leader>rf', '<cmd>Telescope lsp_references<cr>')
 
 
