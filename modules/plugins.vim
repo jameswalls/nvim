@@ -6,6 +6,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 	Plug 'BurntSushi/ripgrep'
 	Plug 'nvim-telescope/telescope-file-browser.nvim'
+	Plug 'kyazdani42/nvim-web-devicons'
 
 	" lsp
 	Plug 'neovim/nvim-lspconfig'
