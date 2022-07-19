@@ -44,6 +44,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'Mofiqul/vscode.nvim'
 	Plug 'sainnhe/gruvbox-material'
 	Plug 'arzg/vim-colors-xcode'
+	Plug 'rmehri01/onenord.nvim'
 call plug#end()
 
 
