@@ -29,7 +29,7 @@ require('vscode').setup({
 		TSType = { fg = c.vscBlueGreen, bg = 'NONE' },
 		TSFuncBuiltin = { fg = c.vscMediumBlue, bg = 'NONE' },
 		TSKeywordOperator = { fg = c.vscPink, bg = 'NONE' },
-		TSMethod = { fg = c.vscFront, bg = 'NONE' },
+		TSMethod = { fg = c.vscLightBlue, bg = 'NONE' },
 		TSKeyword = { fg = c.vscBlue, bg = 'NONE' },
 		TSKeywordReturn = { fg = c.vscPink, bg = 'NONE' },
     }
