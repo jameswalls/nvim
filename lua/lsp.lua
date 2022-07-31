@@ -15,11 +15,11 @@ require'lspconfig'.jedi_language_server.setup{
 }
 
 -- python lsp configuration
-require'lspconfig'.pyright.setup{
-	capabilities = capabilities,
-	on_attach = function()
-	end,
-}
+--require'lspconfig'.pyright.setup{
+	--capabilities = capabilities,
+	--on_attach = function()
+	--end,
+--}
 
 -- autocompletion
 -- nvim-cmp setup
