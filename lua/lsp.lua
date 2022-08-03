@@ -27,9 +27,9 @@ vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 local cmp = require 'cmp'
 cmp.setup {
   snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
+	expand = function(args)
+	  luasnip.lsp_expand(args.body)
+	end,
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
