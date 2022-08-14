@@ -33,6 +33,7 @@ call plug#begin('~/.nvim/plugged')
 	
 	" layout
 	Plug 'itchyny/lightline.vim'
+	Plug 'xiyaowong/nvim-transparent'
 	
 	" git
 	Plug 'sindrets/diffview.nvim'
