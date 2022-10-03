@@ -47,6 +47,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'arzg/vim-colors-xcode'
 	Plug 'rmehri01/onenord.nvim'
 	Plug 'doums/darcula'
+	Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 
