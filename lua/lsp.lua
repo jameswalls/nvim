@@ -14,13 +14,6 @@ require'lspconfig'.jedi_language_server.setup{
 	end,
 }
 
--- python lsp configuration
---require'lspconfig'.pyright.setup{
-	--capabilities = capabilities,
-	--on_attach = function()
-	--end,
---}
-
 -- autocompletion
 -- nvim-cmp setup
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}

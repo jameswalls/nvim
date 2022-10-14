@@ -1,16 +1,16 @@
 -- Lua:
 -- For dark theme (neovim's default)
-vim.o.background = 'dark'
+--vim.o.background = 'dark'
 -- For light theme
 --vim.o.background = 'light'
 
 local c = require('vscode.colors')
 require('vscode').setup({
     -- Enable transparent background
-    transparent = true,
+    transparent = false,
 
     -- Enable italic comment
-    italic_comments = false,
+	italic_comments = true,
 
     -- Disable nvim-tree background color
     disable_nvimtree_bg = true,
@@ -30,7 +30,11 @@ require('vscode').setup({
 		TSFuncBuiltin = { fg = c.vscMediumBlue, bg = 'NONE' },
 		TSKeywordOperator = { fg = c.vscPink, bg = 'NONE' },
 		TSMethod = { fg = c.vscLightBlue, bg = 'NONE' },
-		TSKeyword = { fg = c.vscBlue, bg = 'NONE' },
+		TSKeyword = { fg = c.vscPink, bg = 'NONE' },
 		TSKeywordReturn = { fg = c.vscPink, bg = 'NONE' },
+		TSPunctBracket = { fg = c.vscCodeYellow, bg = 'NONE' },
+		TSParameter = {fg = c.vscMediumBlue, bg = 'NONE'},
+		TSOperator = {fg = c.vscLightRed, bg = 'NONE'},
+		TSFunctionCall = {fg = c.vscBlueGreen, bg = 'NONE'}
     }
 })

@@ -28,7 +28,7 @@ vim.keymap.set('i', '\"', '\"\"<Left>')
 vim.opt.cursorline = true
 
 --set termguicolors
-vim.opt.background = 'dark'
+--vim.opt.background = 'dark'
 
 -- global
 vim.opt_global.completeopt = { "menuone", "noinsert", "noselect" }
