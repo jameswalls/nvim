@@ -28,9 +28,6 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'nvim-treesitter/playground'
 	Plug 'romgrk/nvim-treesitter-context'
 	
-	" python
-	Plug 'vim-python/python-syntax'
-	
 	" layout
 	Plug 'nvim-lualine/lualine.nvim'
 	"Plug 'xiyaowong/nvim-transparent'
@@ -40,9 +37,7 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'lewis6991/gitsigns.nvim'
 	
 	" colorscheme
-	"Plug 'jjpp109309/onedark.nvim'
 	Plug 'navarasu/onedark.nvim'
-	"Plug 'jjpp109309/vscode.nvim'
 	Plug 'Mofiqul/vscode.nvim'
 	Plug 'sainnhe/gruvbox-material'
 	Plug 'arzg/vim-colors-xcode'
@@ -50,5 +45,3 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'doums/darcula'
 	Plug 'projekt0n/github-nvim-theme'
 call plug#end()
-
-
