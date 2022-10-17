@@ -32,15 +32,16 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'vim-python/python-syntax'
 	
 	" layout
-	Plug 'itchyny/lightline.vim'
-	Plug 'xiyaowong/nvim-transparent'
+	Plug 'nvim-lualine/lualine.nvim'
+	"Plug 'xiyaowong/nvim-transparent'
 	
 	" git
 	Plug 'sindrets/diffview.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
 	
 	" colorscheme
-	Plug 'jjpp109309/onedark.nvim'
+	"Plug 'jjpp109309/onedark.nvim'
+	Plug 'navarasu/onedark.nvim'
 	"Plug 'jjpp109309/vscode.nvim'
 	Plug 'Mofiqul/vscode.nvim'
 	Plug 'sainnhe/gruvbox-material'
