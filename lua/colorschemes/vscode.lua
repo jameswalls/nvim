@@ -25,16 +25,16 @@ require('vscode').setup({
         -- this supports the same val table as vim.api.nvim_set_hl
         -- use colors from this colorscheme by requiring vscode.colors!
         --Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
-		TSConstructor = { fg = c.vscBlueGreen, bg = 'NONE' },
-		TSType = { fg = c.vscBlueGreen, bg = 'NONE' },
-		TSFuncBuiltin = { fg = c.vscMediumBlue, bg = 'NONE' },
-		TSKeywordOperator = { fg = c.vscPink, bg = 'NONE' },
-		TSMethod = { fg = c.vscLightBlue, bg = 'NONE' },
-		TSKeyword = { fg = c.vscPink, bg = 'NONE' },
-		TSKeywordReturn = { fg = c.vscPink, bg = 'NONE' },
-		TSPunctBracket = { fg = c.vscCodeYellow, bg = 'NONE' },
-		TSParameter = {fg = c.vscMediumBlue, bg = 'NONE'},
-		TSOperator = {fg = c.vscLightRed, bg = 'NONE'},
-		TSFunctionCall = {fg = c.vscBlueGreen, bg = 'NONE'}
+		--TSConstructor = { fg = c.vscBlueGreen, bg = 'NONE' },
+		--TSType = { fg = c.vscBlueGreen, bg = 'NONE' },
+		--TSFuncBuiltin = { fg = c.vscMediumBlue, bg = 'NONE' },
+		--TSKeywordOperator = { fg = c.vscPink, bg = 'NONE' },
+		--TSMethod = { fg = c.vscLightBlue, bg = 'NONE' },
+		--TSKeyword = { fg = c.vscPink, bg = 'NONE' },
+		--TSKeywordReturn = { fg = c.vscPink, bg = 'NONE' },
+		--TSPunctBracket = { fg = c.vscCodeYellow, bg = 'NONE' },
+		--TSParameter = {fg = c.vscMediumBlue, bg = 'NONE'},
+		--TSOperator = {fg = c.vscLightRed, bg = 'NONE'},
+		--TSFunctionCall = {fg = c.vscBlueGreen, bg = 'NONE'}
     }
 })

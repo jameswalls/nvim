@@ -13,10 +13,13 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'scalameta/nvim-metals'
 	
 	" autocomplete 
-	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'hrsh7th/cmp-buffer'
 	Plug 'hrsh7th/cmp-path'
+	Plug 'hrsh7th/cmp-cmdline'
+	Plug 'hrsh7th/nvim-cmp'
+	Plug 'hrsh7th/vim-vsnip'
+	Plug 'hrsh7th/vim-vsnip-integ'
 
 	Plug 'preservim/nerdcommenter'
 
@@ -30,7 +33,7 @@ call plug#begin('~/.nvim/plugged')
 	
 	" layout
 	Plug 'nvim-lualine/lualine.nvim'
-	"Plug 'xiyaowong/nvim-transparent'
+	Plug 'xiyaowong/nvim-transparent'
 	
 	" git
 	Plug 'sindrets/diffview.nvim'
@@ -41,7 +44,4 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'Mofiqul/vscode.nvim'
 	Plug 'sainnhe/gruvbox-material'
 	Plug 'arzg/vim-colors-xcode'
-	Plug 'rmehri01/onenord.nvim'
-	Plug 'doums/darcula'
-	Plug 'projekt0n/github-nvim-theme'
 call plug#end()
