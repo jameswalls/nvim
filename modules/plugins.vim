@@ -30,10 +30,12 @@ call plug#begin('~/.nvim/plugged')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'nvim-treesitter/playground'
 	Plug 'romgrk/nvim-treesitter-context'
+	Plug 'p00f/nvim-ts-rainbow'
 	
 	" layout
 	Plug 'nvim-lualine/lualine.nvim'
 	Plug 'xiyaowong/nvim-transparent'
+	Plug 'Vonr/align.nvim'
 	
 	" git
 	Plug 'sindrets/diffview.nvim'
