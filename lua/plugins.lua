@@ -84,6 +84,8 @@ return require('packer').startup(
 
 		-- colorschemes
 		use 'Mofiqul/vscode.nvim'
+		use 'arzg/vim-colors-xcode'
+		use { "catppuccin/nvim", as = "catppuccin" }
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
