@@ -1,10 +1,10 @@
 -- scala: metals
 vim.opt_global.shortmess:remove("F")
 
-metals_config = require("metals").bare_config()
+local metals_config = require("metals").bare_config()
 --metals_config.init_options.statusBarProvider = "on"
 
-nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "scala", "sbt", "java" },
 	callback = function()

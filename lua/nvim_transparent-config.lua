@@ -1,3 +1,3 @@
-require'transparent'.setup({
-  enable = false, -- boolean: enable transparent
+require("transparent").setup({
+  enable = true
 })
