@@ -1,4 +1,6 @@
-require("toggleterm").setup{}
+require("toggleterm").setup{
+	open_mapping = [[<C-\>]],
+}
 
 -- keymaps
 function _G.set_terminal_keymaps()
