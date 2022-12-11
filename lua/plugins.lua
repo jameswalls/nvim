@@ -71,6 +71,13 @@ return require('packer').startup(
 		use({'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" }})
 
 		----------------------------------------------------------------------
+		-- Terminals
+		----------------------------------------------------------------------
+		use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+		  require("toggleterm").setup()
+		end}
+
+		----------------------------------------------------------------------
 		-- themes & layout
 		----------------------------------------------------------------------
 		-- lualine
