@@ -54,6 +54,7 @@ return require('packer').startup(
 		use 'hrsh7th/cmp-path'
 		use 'hrsh7th/cmp-cmdline'
 		use 'hrsh7th/nvim-cmp'
+		use 'saadparwaiz1/cmp_luasnip'
 
 		-- vsnip
 		use 'hrsh7th/vim-vsnip'
@@ -61,6 +62,8 @@ return require('packer').startup(
 
 		-- luasnip
 		use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
+		use 'nvim-tree/nvim-web-devicons'
+		use 'rafamadriz/friendly-snippets'
 
 		----------------------------------------------------------------------
 		-- git

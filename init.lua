@@ -1,5 +1,6 @@
 require('general')
 require('plugins')
+require('luasnip-config')
 require('lsp-config')
 require('treesitter-config')
 require('telescope-config')
