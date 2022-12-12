@@ -59,6 +59,8 @@ return require('packer').startup(
 		use 'hrsh7th/vim-vsnip'
 		use 'hrsh7th/vim-vsnip-integ'
 
+		-- luasnip
+		use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
 
 		----------------------------------------------------------------------
 		-- git
