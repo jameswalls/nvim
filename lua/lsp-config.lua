@@ -95,7 +95,7 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true
 		}),
-		["<Tab>"] = cmp.mapping(
+		["C-n"] = cmp.mapping(
 			function(fallback)
 				if cmp.visible() then
 					cmp.select_next_item()
@@ -109,7 +109,7 @@ cmp.setup({
 			end,
 			{ "i", "s" }
 		),
-		["<S-Tab>"] = cmp.mapping(
+		["C-p"] = cmp.mapping(
 			function(fallback)
 				if cmp.visible() then
 					cmp.select_prev_item()
