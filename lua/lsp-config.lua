@@ -5,6 +5,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- lsp default keymappings
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {buffer=0})
 
 
 -- python lsp configuration
