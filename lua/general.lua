@@ -18,11 +18,6 @@ vim.opt.colorcolumn = '80'
 
 --insert mode remaps 
 vim.keymap.set('i', 'jk', '<Esc>')
-vim.keymap.set('i', '(', '()<Left>')
-vim.keymap.set('i', '[', '[]<Left>')
-vim.keymap.set('i', '{', '{}<Left>')
-vim.keymap.set('i', '\'', '\'\'<Left>')
-vim.keymap.set('i', '\"', '\"\"<Left>')
 
 --editor
 vim.opt.cursorline = true

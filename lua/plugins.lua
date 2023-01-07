@@ -91,13 +91,16 @@ return require('packer').startup(
 		  'nvim-lualine/lualine.nvim',
 		  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 		}
-		
+
 		-- center pad
 		-- packer.nvim
 		use { 'smithbm2316/centerpad.nvim' }
 
 		-- transparent vim
 		use 'xiyaowong/nvim-transparent'
+
+		-- autopairs
+		use { "windwp/nvim-autopairs" }
 
 		-- colorschemes
 		use 'Mofiqul/vscode.nvim'
