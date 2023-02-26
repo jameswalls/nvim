@@ -16,7 +16,7 @@ require'lspconfig'.jedi_language_server.setup{
 }
 
 -- lua lsp configuration
-require'lspconfig'.sumneko_lua.setup {
+require'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {
       runtime = {
