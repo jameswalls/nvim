@@ -24,4 +24,3 @@ vim.opt.cursorline = true
 
 --set termguicolors
 --vim.opt.background = 'dark'
-
