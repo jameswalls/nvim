@@ -23,4 +23,4 @@ vim.keymap.set('i', 'jk', '<Esc>')
 vim.opt.cursorline = true
 
 --set termguicolors
---vim.opt.background = 'dark'
+vim.opt.background = 'dark'

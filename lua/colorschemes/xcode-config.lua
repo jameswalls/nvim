@@ -1,5 +1,0 @@
---vim.api.nvim_command('colorscheme xcodedark')
---vim.api.nvim_command('colorscheme xcodedarkhc')
---vim.api.nvim_command('colorscheme xcodelight')
---vim.api.nvim_command('colorscheme xcodelighthc')
-vim.api.nvim_command('colorscheme xcodewwdc')
