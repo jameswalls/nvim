@@ -6,7 +6,9 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- lsp default keymappings
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {buffer=0})
-
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer=0})
+vim.keymap.set('n', 'td', vim.lsp.buf.type_definition, {buffer=0})
+vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, {buffer=0})
 
 -- python lsp configuration
 require'lspconfig'.jedi_language_server.setup{

@@ -24,9 +24,9 @@ require'nvim-treesitter.configs'.setup {
 		query = 'rainbow-parens',
 		strategy = require 'ts-rainbow.strategy.local',
 		hlgroups = {
-			"TSRainbowCustomBlue",
-			"TSRainbowCustomPurple",
 			"TSRainbowCustomYellow",
+			"TSRainbowCustomPurple",
+			"TSRainbowCustomBlue",
 		}
 	}
 }
