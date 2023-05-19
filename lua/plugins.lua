@@ -17,7 +17,7 @@ return require('packer').startup(
 		use 'wbthomason/packer.nvim'
 
 		----------------------------------------------------------------------
-		-- treesitter
+		-- comment
 		----------------------------------------------------------------------
 		use 'terrortylor/nvim-comment'
 
@@ -37,18 +37,18 @@ return require('packer').startup(
 		----------------------------------------------------------------------
 		-- telescope
 		----------------------------------------------------------------------
-		use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
 		-- fzf for fast search
 		use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
-		----------------------------------------------------------------------
-		-- lsp
-		----------------------------------------------------------------------
 		use {
 			'nvim-telescope/telescope.nvim', tag = '0.1.0',
 			requires = { {'nvim-lua/plenary.nvim'} }
 		}
+		----------------------------------------------------------------------
+		-- lsp
+		----------------------------------------------------------------------
+
+		use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
 		-- cmp for autocompletion
 		use 'hrsh7th/cmp-nvim-lsp'
@@ -67,6 +67,17 @@ return require('packer').startup(
 		use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
 		use 'nvim-tree/nvim-web-devicons'
 		use 'rafamadriz/friendly-snippets'
+
+		----------------------------------------------------------------------
+		-- nvim-tree
+		----------------------------------------------------------------------
+		use {
+			'nvim-tree/nvim-tree.lua',
+			requires = {
+				'nvim-tree/nvim-web-devicons', -- optional
+			}
+		}
+
 
 		----------------------------------------------------------------------
 		-- git

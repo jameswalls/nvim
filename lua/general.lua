@@ -24,3 +24,8 @@ vim.opt.cursorline = true
 
 --set termguicolors
 vim.opt.background = 'dark'
+
+-- nvim-tree
+vim.opt.termguicolors = true
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

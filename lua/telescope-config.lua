@@ -1,10 +1,26 @@
 -- initial telescope
 require('telescope').setup{
+
 	defaults = {
 		prompt_prefix = "> ",
 		wrap_results = true,
-		path_display = {"absolute"}
-	}
+		path_display = {"absolute"},
+
+		-- global ivy selection
+		sorting_strategy = "ascending",
+
+		layout_strategy = "bottom_pane",
+		layout_config = {
+			height = 25,
+		},
+
+		border = true,
+		borderchars = {
+			prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
+			results = { " " },
+			preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+		},
+	},
 }
 
 -- additional extensions
