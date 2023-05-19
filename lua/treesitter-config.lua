@@ -13,9 +13,15 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
 -- TS config
 require'nvim-treesitter.configs'.setup {
+	ensure_installed = { "lua", "vim", "vimdoc", "query", "python", "scala", "json", "org" },
+
+	sync_install = false,
+
+	auto_install = true,
+
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = false,
+		additional_vim_regex_highlighting = {'org'},
 	},
 
 	rainbow = {
@@ -24,9 +30,9 @@ require'nvim-treesitter.configs'.setup {
 		query = 'rainbow-parens',
 		strategy = require 'ts-rainbow.strategy.local',
 		hlgroups = {
-			"TSRainbowCustomYellow",
-			"TSRainbowCustomPurple",
 			"TSRainbowCustomBlue",
+			"TSRainbowCustomPurple",
+			"TSRainbowCustomYellow",
 		}
 	}
 }

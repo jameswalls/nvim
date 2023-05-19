@@ -88,7 +88,7 @@ cmp.setup({
 			vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
 			vim_item.menu = ({
 				nvim_lsp = "[Lsp]",
-				luasnip = "[Snippet]",
+				luasnip = "[Luasnip]",
 				buffer = "[Buffer]",
 				path = "[Path]"
 			})[entry.source.name]
@@ -98,10 +98,11 @@ cmp.setup({
 	},
 	sources = {
 	  { name = "nvim_lsp"},
+	  { name = "buffer" },
+	  { name = "path" },
 	  { name = "luasnip"},
 	  { name = "nvim_lua"},
-	  { name = "buffer" },
-	  { name = "path" }
+	  { name = "orgmode"}
 	}
 })
 
