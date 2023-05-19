@@ -1,7 +1,9 @@
 -- initial telescope
 require('telescope').setup{
 	defaults = {
-		prompt_prefix = "> "
+		prompt_prefix = "> ",
+		wrap_results = true,
+		path_display = {"absolute"}
 	}
 }
 
