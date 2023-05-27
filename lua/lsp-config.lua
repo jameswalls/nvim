@@ -17,6 +17,7 @@ require'lspconfig'.jedi_language_server.setup{
 	end,
 }
 
+
 -- lua lsp configuration
 require'lspconfig'.lua_ls.setup {
   settings = {
@@ -41,3 +42,10 @@ require'lspconfig'.lua_ls.setup {
   },
 }
 
+require'lspconfig'.clangd.setup{
+	filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+
+	capabilities = capabilities,
+	on_attach = function()
+	end,
+}
