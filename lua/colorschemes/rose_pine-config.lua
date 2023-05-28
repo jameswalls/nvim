@@ -6,7 +6,7 @@ require('rose-pine').setup({
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = false,
-	disable_float_background = false,
+	disable_float_background = true,
 	disable_italics = true,
 
 	-- --- @usage string hex value or named color from rosepinetheme.com/palette
@@ -43,13 +43,10 @@ require('rose-pine').setup({
 	-- 	-- ColorColumn = { bg = 'rose' },
 	--
 	-- 	-- Blend colours against the "base" background
-	-- 	CursorLine = { bg = 'foam', blend = 10 },
-	-- 	StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+	-- CursorLine = { bg = 'foam', blend = 10 },
+	-- StatusLine = { fg = 'love', bg = 'love', blend = 10 },
 	-- }
 })
 
 -- Set colorscheme after options
 vim.cmd.colorscheme "rose-pine"
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
