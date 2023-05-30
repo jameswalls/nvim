@@ -47,8 +47,12 @@ return require('packer').startup(
 		----------------------------------------------------------------------
 		-- lsp
 		----------------------------------------------------------------------
-
-		use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+		-- mason
+		use {
+			"williamboman/mason.nvim",
+			'williamboman/mason-lspconfig.nvim',
+			'neovim/nvim-lspconfig'
+		}
 
 		-- cmp for autocompletion
 		use 'hrsh7th/cmp-nvim-lsp'
@@ -58,10 +62,6 @@ return require('packer').startup(
 		use 'hrsh7th/nvim-cmp'
 		use 'saadparwaiz1/cmp_luasnip'
 		use 'hrsh7th/cmp-nvim-lua'
-
-		-- vsnip
-		use 'hrsh7th/vim-vsnip'
-		use 'hrsh7th/vim-vsnip-integ'
 
 		-- luasnip
 		use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})

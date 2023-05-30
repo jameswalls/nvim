@@ -1,51 +1,29 @@
--- lsp
--- capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+require('mason').setup()
+require('mason-lspconfig').setup({
+	ensure_installed = { "lua_ls", "pylsp" },
+})
 
--- lsp default keymappings
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {buffer=0})
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer=0})
-vim.keymap.set('n', 'td', vim.lsp.buf.type_definition, {buffer=0})
-vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, {buffer=0})
+local on_attach = function(_, bufnr)
+  -- Mappings.
+  local opts = { buffer = bufnr, noremap = true, silent = true }
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+  vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+  vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+  vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+  vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+  vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+end
 
--- python lsp configuration
-require'lspconfig'.jedi_language_server.setup{
-	capabilities = capabilities,
-	on_attach = function()
-	end,
+require("lspconfig").lua_ls.setup {
+	on_attach = on_attach
 }
 
-
--- lua lsp configuration
-require'lspconfig'.lua_ls.setup {
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-}
-
-require'lspconfig'.clangd.setup{
-	filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-
-	capabilities = capabilities,
-	on_attach = function()
-	end,
+require("lspconfig").pylsp.setup {
+	on_attach = on_attach
 }
