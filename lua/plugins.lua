@@ -32,6 +32,8 @@ return require('packer').startup(
         	end,
     	}
 
+		use { 'nvim-treesitter/playground' }
+
 		use 'HiPhish/nvim-ts-rainbow2'
 
 		----------------------------------------------------------------------

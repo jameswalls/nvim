@@ -1,6 +1,7 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
 	ensure_installed = { "lua_ls", "pylsp" },
+	PATH = "prepend"
 })
 
 local on_attach = function(_, bufnr)
@@ -21,7 +22,15 @@ local on_attach = function(_, bufnr)
 end
 
 require("lspconfig").lua_ls.setup {
-	on_attach = on_attach
+	on_attach = on_attach,
+	settings = {
+		Lua = {
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = {'vim'},
+			}
+		}
+	}
 }
 
 require("lspconfig").pylsp.setup {
