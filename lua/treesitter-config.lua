@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
 -- TS config
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "lua", "vim", "vimdoc", "query", "python", "scala", "json", "org" },
+	ensure_installed = { "lua", "vim", "vimdoc", "query", "python", "scala", "json" },
 
 	sync_install = false,
 
@@ -22,7 +22,7 @@ require'nvim-treesitter.configs'.setup {
 
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = {'org'},
+		additional_vim_regex_highlighting = false,
 	},
 
 	rainbow = {

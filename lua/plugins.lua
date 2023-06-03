@@ -122,11 +122,6 @@ return require('packer').startup(
 		use { "catppuccin/nvim", as = "catppuccin" }
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use 'nyoom-engineering/oxocarbon.nvim'
-		use {
-			'nvim-orgmode/orgmode', config = function()
-				require('orgmode').setup{}
-			end
-		}
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then

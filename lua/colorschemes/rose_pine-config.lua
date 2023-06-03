@@ -10,9 +10,8 @@ require('rose-pine').setup({
 	disable_italics = true,
 
 	-- --- @usage string hex value or named color from rosepinetheme.com/palette
-	-- groups = {
-	-- 	background = 'base',
-	-- 	background_nc = '_experimental_nc',
+	groups = {
+		background = '#ffffff',
 	-- 	panel = 'surface',
 	-- 	panel_nc = 'base',
 	-- 	border = 'highlight_med',
@@ -35,17 +34,20 @@ require('rose-pine').setup({
 	-- 	}
 	-- 	-- or set all headings at once
 	-- 	-- headings = 'subtle'
-	-- },
+	},
 	--
 	-- Change specific vim highlight groups
 	-- https://github.com/rose-pine/neovim/wiki/Recipes
-	-- highlight_groups = {
+	highlight_groups = {
 	-- 	-- ColorColumn = { bg = 'rose' },
 	--
 	-- 	-- Blend colours against the "base" background
 	-- CursorLine = { bg = 'foam', blend = 10 },
 	-- StatusLine = { fg = 'love', bg = 'love', blend = 10 },
-	-- }
+		['@variable'] = { fg = '#000000' },
+		['@field'] = { fg = '#f2558f' },
+		['@function.builtin'] = { fg = '#000000' }
+	}
 })
 
 -- Set colorscheme after options
