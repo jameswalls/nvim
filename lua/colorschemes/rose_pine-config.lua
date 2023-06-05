@@ -17,8 +17,8 @@ require('rose-pine').setup({
 	highlight_groups = {
 		['@constant'] = { fg = 'Rose' },
 		['@parameter'] = { fg = 'Love' },
-		['@number'] = { fg = 'Text'},
-		['@float'] = { fg = 'Text'}
+		['@number'] = { fg = 'Foam'},
+		['@float'] = { fg = 'Foam'}
 	}
 })
 
