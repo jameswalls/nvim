@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = { "lua_ls", "pylsp" },
+	ensure_installed = { 'lua_ls', 'pylsp', 'jedi_language_server'},
 	PATH = "prepend"
 })
 
