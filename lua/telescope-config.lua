@@ -11,7 +11,7 @@ require('telescope').setup{
 
 		layout_strategy = "bottom_pane",
 		layout_config = {
-			height = 25,
+			height = 35,
 		},
 
 		border = true,

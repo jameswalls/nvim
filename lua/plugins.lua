@@ -66,7 +66,7 @@ return require('packer').startup(
 		use 'hrsh7th/cmp-nvim-lua'
 
 		-- luasnip
-		use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
+		use({"L3MON4D3/LuaSnip"})
 		use 'nvim-tree/nvim-web-devicons'
 		use 'rafamadriz/friendly-snippets'
 
