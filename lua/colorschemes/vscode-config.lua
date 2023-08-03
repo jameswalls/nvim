@@ -30,6 +30,11 @@ require('vscode').setup({
 		['@type.builtin'] = { fg=c.vscBlueGreen },
 		['@function.builtin'] = { fg=c.vscBlueGreen },
 		['@keyword.operator'] = { fg=c.vscPink },
+		['@punctuation.special'] = { fg=c.vscDarkYellow },
+		['@function.call'] = { fg='#DDDDDD' },
+		['@method.call'] = { fg='#DDDDDD' },
+		['@field'] = { fg='#DDDDDD' },
+		['@none'] = { fg=c.vscBlue },
     }
 })
 require('vscode').load()
