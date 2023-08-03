@@ -4,7 +4,8 @@ vim.o.background = 'dark'
 -- For light theme
 --vim.o.background = 'light'
 
-local c = require('vscode.colors')
+local c = require('vscode.colors').get_colors()
+
 require('vscode').setup({
     -- Enable transparent background
     transparent = false,
@@ -25,5 +26,10 @@ require('vscode').setup({
         -- this supports the same val table as vim.api.nvim_set_hl
         -- use colors from this colorscheme by requiring vscode.colors!
         --Variable = { fg=c.vscYellow, bg=c.vscLightGreen, bold=true },
+		['@constructor'] = { fg=c.vscYellow },
+		['@type.builtin'] = { fg=c.vscBlueGreen },
+		['@function.builtin'] = { fg=c.vscBlueGreen },
+		['@keyword.operator'] = { fg=c.vscPink },
     }
 })
+require('vscode').load()
