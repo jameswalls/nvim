@@ -34,7 +34,7 @@ require'nvim-treesitter.configs'.setup {
 			"TSRainbowCustomYellow",
 			"TSRainbowCustomPurple",
 			"TSRainbowCustomBlue",
-			"TSRainbowCustomGreen",
+			-- "TSRainbowCustomGreen",
 		}
 	},
 

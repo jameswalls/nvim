@@ -26,15 +26,19 @@ require('vscode').setup({
         -- this supports the same val table as vim.api.nvim_set_hl
         -- use colors from this colorscheme by requiring vscode.colors!
         --Variable = { fg=c.vscYellow, bg=c.vscLightGreen, bold=true },
-		['@constructor'] = { fg=c.vscYellow },
+		['@constructor'] = { fg=c.vscOrange },
 		['@type.builtin'] = { fg=c.vscBlueGreen },
 		['@function.builtin'] = { fg=c.vscBlueGreen },
+		['@operator'] = { fg=c.vscPink },
 		['@keyword.operator'] = { fg=c.vscPink },
 		['@punctuation.special'] = { fg=c.vscDarkYellow },
-		['@function.call'] = { fg='#DDDDDD' },
-		['@method.call'] = { fg='#DDDDDD' },
-		['@field'] = { fg='#DDDDDD' },
+		['@method'] = { fg=c.vscOrange },
+		['@method.call'] = { fg=c.vscBlueGreen },
+		['@function.call'] = { fg=c.vscBlueGreen },
+		['@field'] = { fg=c.vscFront},
 		['@none'] = { fg=c.vscBlue },
+		['@attribute'] = { fg=c.vscBlueGreen },
+		['@string.escape'] = { fg=c.vscLightRed }
     }
 })
 require('vscode').load()
