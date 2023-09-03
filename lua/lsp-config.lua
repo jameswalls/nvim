@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = { 'lua_ls', 'pylsp', 'jedi_language_server'},
+	ensure_installed = { 'lua_ls', 'pylsp', 'jedi_language_server', 'rust_analyzer'},
 	PATH = "prepend"
 })
 
@@ -34,5 +34,9 @@ require("lspconfig").lua_ls.setup {
 }
 
 require("lspconfig").pylsp.setup {
+	on_attach = on_attach
+}
+
+require('lspconfig').rust_analyzer.setup{
 	on_attach = on_attach
 }
