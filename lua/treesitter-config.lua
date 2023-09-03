@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, 'TSRainbowCustomBlue', {fg = '#35a0f8'})
     vim.api.nvim_set_hl(0, 'TSRainbowCustomPurple', {fg = '#d07ad1'})
 	vim.api.nvim_set_hl(0, 'TSRainbowCustomGreen', {fg = '#559777'})
+	vim.api.nvim_set_hl(0, 'TSRainbowCustomOrange', {fg = '#FFAC1C'})
   end
 })
 
@@ -34,7 +35,6 @@ require'nvim-treesitter.configs'.setup {
 			"TSRainbowCustomYellow",
 			"TSRainbowCustomPurple",
 			"TSRainbowCustomBlue",
-			-- "TSRainbowCustomGreen",
 		}
 	},
 
