@@ -4,8 +4,8 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false,
-    term_colors = false,
+    transparent_background = true,
+    term_colors = true,
     dim_inactive = {
         enabled = false,
         shade = "dark",
@@ -30,10 +30,10 @@ require("catppuccin").setup({
     color_overrides = {},
     custom_highlights = {},
     integrations = {
-        cmp = false,
+        cmp = true,
         gitsigns = false,
-        nvimtree = false,
-        telescope = false,
+        nvimtree = true,
+        telescope = true,
         notify = false,
         mini = false,
 	}
