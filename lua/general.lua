@@ -20,7 +20,7 @@ vim.opt.colorcolumn = '80'
 vim.keymap.set('i', 'jk', '<Esc>')
 
 --editor
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.guicursor = ''
 
 --set termguicolors
