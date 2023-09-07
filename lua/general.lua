@@ -6,6 +6,9 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 
+-- format optionsj
+vim.cmd([[au FileType * set fo-=c fo-=r fo-=o]])
+
 --layout
 vim.opt.relativenumber = true
 vim.opt.number = true
