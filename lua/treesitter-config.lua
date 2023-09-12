@@ -10,6 +10,15 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, 'TSRainbowCustomPurple', {fg = '#d07ad1'})
 	vim.api.nvim_set_hl(0, 'TSRainbowCustomGreen', {fg = '#559777'})
 	vim.api.nvim_set_hl(0, 'TSRainbowCustomOrange', {fg = '#FFAC1C'})
+	vim.api.nvim_set_hl(0, 'NordFrost1', {fg = '#8FBCBB'})
+	vim.api.nvim_set_hl(0, 'NordFrost2', {fg = '#88C0D0'})
+	vim.api.nvim_set_hl(0, 'NordFrost3', {fg = '#81A1C1'})
+	vim.api.nvim_set_hl(0, 'NordFrost4', {fg = '#5E81AC'})
+	vim.api.nvim_set_hl(0, 'NordAurora1', {fg = '#BF616A'})
+	vim.api.nvim_set_hl(0, 'NordAurora2', {fg = '#D08770'})
+	vim.api.nvim_set_hl(0, 'NordAurora3', {fg = '#EBCB8B'})
+	vim.api.nvim_set_hl(0, 'NordAurora4', {fg = '#A3BE8C'})
+	vim.api.nvim_set_hl(0, 'NordAurora5', {fg = '#B48EAD'})
   end
 })
 
@@ -32,12 +41,23 @@ require'nvim-treesitter.configs'.setup {
 		query = 'rainbow-parens',
 		strategy = require 'ts-rainbow.strategy.local',
 		hlgroups = {
-			"TSRainbowCustomYellow",
-			"TSRainbowCustomPurple",
-			"TSRainbowCustomBlue",
+			-- vscode
+			-- "TSRainbowCustomYellow",
+			-- "TSRainbowCustomPurple",
+			-- "TSRainbowCustomBlue",
+			-- nord: Frost
+			-- "NordFrost1",
+			-- "NordFrost2",
+			-- "NordFrost3",
+			-- "NordFrost4",
+			-- nord: aurora
+			"NordAurora3",
+			"NordAurora2",
+			"NordAurora4",
+			"NordAurora5",
+			"NordAurora1",
 		}
 	},
-
 	playground = {
 	    enable = true,
 	    disable = {},
