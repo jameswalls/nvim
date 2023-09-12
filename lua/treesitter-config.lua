@@ -53,9 +53,9 @@ require'nvim-treesitter.configs'.setup {
 			-- nord: aurora
 			"NordAurora3",
 			"NordAurora2",
-			"NordAurora4",
 			"NordAurora5",
 			"NordAurora1",
+			"NordAurora4",
 		}
 	},
 	playground = {
