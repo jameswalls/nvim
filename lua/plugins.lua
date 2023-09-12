@@ -122,8 +122,9 @@ return require('packer').startup(
 		use { "catppuccin/nvim", as = "catppuccin" }
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use 'nyoom-engineering/oxocarbon.nvim'
+		use 'shaunsingh/nord.nvim'
 
-		-- Put this at the end after all plugins
+			-- Put this at the end after all plugins
 		if packer_bootstrap then
 			require('packer').sync()
 	  	end
