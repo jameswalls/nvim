@@ -39,11 +39,6 @@ return require('packer').startup(
 			requires = { { 'nvim-treesitter/nvim-treesitter' } }
 		}
 
-		use {
-            'lukas-reineke/headlines.nvim',
-            after = 'nvim-treesitter',
-		}
-
 		----------------------------------------------------------------------
 		-- telescope
 		----------------------------------------------------------------------
