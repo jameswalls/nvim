@@ -11,7 +11,6 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       reload_on_bufenter = false,
       respect_buf_cwd = false,
       on_attach = "default",
-      remove_keymaps = false,
       select_prompts = false,
       view = {
         centralize_selection = false,
@@ -23,26 +22,8 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         preserve_window_proportions = false,
         number = false,
         relativenumber = true,
-        signcolumn = "yes",
-        mappings = {
-          custom_only = false,
-          list = {
-            -- user mappings go here
-          },
-        },
-        float = {
-          enable = false,
-          quit_on_focus_loss = true,
-          open_win_config = {
-            relative = "editor",
-            border = "rounded",
-            width = 30,
-            height = 30,
-            row = 1,
-            col = 1,
-          },
-        },
-      },
+        signcolumn = "yes"
+    	},
       renderer = {
         add_trailing = false,
         group_empty = false,
@@ -237,5 +218,5 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           watcher = false,
         },
       },
-    } -- END_DEFAULT_OPTS
+} -- END_DEFAULT_OPTS
 
