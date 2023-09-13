@@ -38,6 +38,14 @@ return require('packer').startup(
 			'HiPhish/nvim-ts-rainbow2', 
 			requires = { { 'nvim-treesitter/nvim-treesitter' } }
 		}
+
+		use {
+            'lukas-reineke/headlines.nvim',
+            after = 'nvim-treesitter',
+            config = function()
+                require('headlines').setup()
+            end,
+        }
 		
 		----------------------------------------------------------------------
 		-- telescope
