@@ -20,7 +20,7 @@ return require('packer').startup(
 		-- comment
 		----------------------------------------------------------------------
 		use 'terrortylor/nvim-comment'
-		
+
 		----------------------------------------------------------------------
 		-- treesitter
 		----------------------------------------------------------------------
@@ -31,9 +31,9 @@ return require('packer').startup(
 				ts_update()
 		        	end,
 		    	}
-		
+
 		use { 'nvim-treesitter/playground' }
-		
+
 		use {
 			'HiPhish/nvim-ts-rainbow2', 
 			requires = { { 'nvim-treesitter/nvim-treesitter' } }
@@ -42,15 +42,12 @@ return require('packer').startup(
 		use {
             'lukas-reineke/headlines.nvim',
             after = 'nvim-treesitter',
-            config = function()
-                require('headlines').setup()
-            end,
-        }
-		
+		}
+
 		----------------------------------------------------------------------
 		-- telescope
 		----------------------------------------------------------------------
-		
+
 		-- fzf for fast search
 		use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 		use {
@@ -66,7 +63,7 @@ return require('packer').startup(
 			'williamboman/mason-lspconfig.nvim',
 			'neovim/nvim-lspconfig'
 		}
-		
+
 		-- cmp for autocompletion
 		use 'hrsh7th/cmp-nvim-lsp'
 		use 'hrsh7th/cmp-buffer'
@@ -75,12 +72,12 @@ return require('packer').startup(
 		use 'hrsh7th/nvim-cmp'
 		use 'saadparwaiz1/cmp_luasnip'
 		use 'hrsh7th/cmp-nvim-lua'
-		
+
 		-- luasnip
 		use({"L3MON4D3/LuaSnip"})
 		use 'nvim-tree/nvim-web-devicons'
 		use 'rafamadriz/friendly-snippets'
-		
+
 		----------------------------------------------------------------------
 		-- nvim-tree
 		----------------------------------------------------------------------
@@ -90,18 +87,18 @@ return require('packer').startup(
 				'nvim-tree/nvim-web-devicons', -- optional
 			}
 		}
-		
-		
+
+
 		----------------------------------------------------------------------
 		-- git
 		----------------------------------------------------------------------
 		use { 'lewis6991/gitsigns.nvim' }
-		
+
 		----------------------------------------------------------------------
 		-- metals
 		----------------------------------------------------------------------
 		use({'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" }})
-		
+
 		----------------------------------------------------------------------
 		-- themes & layout
 		----------------------------------------------------------------------
@@ -110,24 +107,24 @@ return require('packer').startup(
 		  'nvim-lualine/lualine.nvim',
 		  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 		}
-		
+
 		-- center pad
 		-- packer.nvim
 		use { 'smithbm2316/centerpad.nvim' }
-		
+
 		-- transparent vim
 		-- use 'xiyaowong/nvim-transparent'
-		
+
 		-- autopairs
 		use { "windwp/nvim-autopairs" }
-		
+
 		-- colorschemes
 		use 'Mofiqul/vscode.nvim'
 		use { "catppuccin/nvim", as = "catppuccin" }
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use 'nyoom-engineering/oxocarbon.nvim'
 		use 'shaunsingh/nord.nvim'
-		
+
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
 			require('packer').sync()
