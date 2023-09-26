@@ -103,10 +103,6 @@ return require('packer').startup(
 		  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 		}
 
-		-- center pad
-		-- packer.nvim
-		use { 'smithbm2316/centerpad.nvim' }
-
 		-- transparent vim
 		-- use 'xiyaowong/nvim-transparent'
 
@@ -119,6 +115,7 @@ return require('packer').startup(
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use 'nyoom-engineering/oxocarbon.nvim'
 		use 'shaunsingh/nord.nvim'
+		use 'loctvl842/monokai-pro.nvim'
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
