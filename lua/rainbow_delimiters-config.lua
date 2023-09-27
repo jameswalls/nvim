@@ -1,4 +1,4 @@
--- This module contains a number of default definitions
+-- configure rainbow delimiters
 local rainbow_delimiters = require 'rainbow-delimiters'
 
 vim.g.rainbow_delimiters = {
@@ -11,13 +11,11 @@ vim.g.rainbow_delimiters = {
         lua = 'rainbow-blocks',
     },
     highlight = {
-        'RainbowDelimiterRed',
-        'RainbowDelimiterYellow',
-        'RainbowDelimiterBlue',
-        'RainbowDelimiterOrange',
-        'RainbowDelimiterGreen',
-        'RainbowDelimiterViolet',
-        'RainbowDelimiterCyan',
+		'TSRainbowCustomPurple',
+		'TSRainbowCustomBlue',
+		'TSRainbowCustomYellow',
+		'TSRainbowCustomGreen',
+		'TSRainbowCustomOrange',
     },
 }
 

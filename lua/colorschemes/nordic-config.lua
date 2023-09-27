@@ -20,11 +20,11 @@ require 'nordic' .setup {
         -- Bold font in cursorline.
         bold = false,
         -- Bold cursorline number.
-        bold_number = true,
+        bold_number = false,
         -- Avialable styles: 'dark', 'light'.
-        theme = 'dark',
+        theme = 'light',
         -- Blending the cursorline bg with the buffer bg.
-        blend = 0.7,
+        blend = 1,
     },
     noice = {
         -- Available styles: `classic`, `flat`.
@@ -44,4 +44,5 @@ require 'nordic' .setup {
     }
 }
 
-require 'nordic' .load()
+-- require 'nordic' .load()
+vim.cmd([[colorscheme nordic]])
