@@ -12,8 +12,8 @@ vim.g.rainbow_delimiters = {
     },
     highlight = {
 		'TSRainbowCustomPurple',
-		'TSRainbowCustomBlue',
 		'TSRainbowCustomYellow',
+		'TSRainbowCustomBlue',
 		'TSRainbowCustomGreen',
 		'TSRainbowCustomOrange',
     },
