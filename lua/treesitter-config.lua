@@ -35,31 +35,6 @@ require'nvim-treesitter.configs'.setup {
 		additional_vim_regex_highlighting = false,
 	},
 
-	rainbow = {
-		enable = true,
-		disable = {},
-		query = 'rainbow-parens',
-		strategy = require 'ts-rainbow.strategy.local',
-		hlgroups = {
-			-- vscode
-			"TSRainbowCustomBlue",
-			"TSRainbowCustomYellow",
-			"TSRainbowCustomPurple",
-			"TSRainbowCustomGreen",
-			"TSRainbowCustomOrange",
-			-- nord: Frost
-			-- "NordFrost1",
-			-- "NordFrost2",
-			-- "NordFrost3",
-			-- "NordFrost4",
-			-- nord: aurora
-			-- "NordAurora3",
-			-- "NordAurora2",
-			-- "NordAurora5",
-			-- "NordAurora1",
-			-- "NordAurora4",
-		}
-	},
 	playground = {
 	    enable = true,
 	    disable = {},

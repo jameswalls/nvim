@@ -34,10 +34,6 @@ return require('packer').startup(
 
 		use { 'nvim-treesitter/playground' }
 
-		use {
-			'HiPhish/nvim-ts-rainbow2', 
-			requires = { { 'nvim-treesitter/nvim-treesitter' } }
-		}
 
 		----------------------------------------------------------------------
 		-- telescope
@@ -102,6 +98,9 @@ return require('packer').startup(
 		  'nvim-lualine/lualine.nvim',
 		  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 		}
+
+		-- parenthesis
+		use 'HiPhish/rainbow-delimiters.nvim'
 
 		-- transparent vim
 		-- use 'xiyaowong/nvim-transparent'
