@@ -115,6 +115,7 @@ return require('packer').startup(
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use 'nyoom-engineering/oxocarbon.nvim'
 		use 'shaunsingh/nord.nvim'
+		use 'AlexvZyl/nordic.nvim'
 		use 'loctvl842/monokai-pro.nvim'
 
 		-- Put this at the end after all plugins

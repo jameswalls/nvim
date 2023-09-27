@@ -42,20 +42,22 @@ require'nvim-treesitter.configs'.setup {
 		strategy = require 'ts-rainbow.strategy.local',
 		hlgroups = {
 			-- vscode
-			-- "TSRainbowCustomYellow",
-			-- "TSRainbowCustomPurple",
-			-- "TSRainbowCustomBlue",
+			"TSRainbowCustomBlue",
+			"TSRainbowCustomYellow",
+			"TSRainbowCustomPurple",
+			"TSRainbowCustomGreen",
+			"TSRainbowCustomOrange",
 			-- nord: Frost
 			-- "NordFrost1",
 			-- "NordFrost2",
 			-- "NordFrost3",
 			-- "NordFrost4",
 			-- nord: aurora
-			"NordAurora3",
-			"NordAurora2",
-			"NordAurora5",
-			"NordAurora1",
-			"NordAurora4",
+			-- "NordAurora3",
+			-- "NordAurora2",
+			-- "NordAurora5",
+			-- "NordAurora1",
+			-- "NordAurora4",
 		}
 	},
 	playground = {
