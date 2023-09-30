@@ -1,6 +1,6 @@
---language en_US
+-- language en_US
 
---split navigation
+-- split navigation
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
@@ -9,7 +9,7 @@ vim.keymap.set('n', '<C-h>', '<C-w>h')
 -- format optionsj
 vim.cmd([[au FileType * set fo-=c fo-=r fo-=o]])
 
---layout
+-- layout
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
@@ -20,16 +20,17 @@ vim.opt.scrolloff = 4
 vim.opt.wrap = true
 vim.opt.colorcolumn = '80'
 
---insert mode remaps 
+-- insert mode remaps 
 vim.keymap.set('i', 'jk', '<Esc>')
-vim.keymap.set('i', 'jl', '<Esc>la')
-vim.keymap.set('i', 'j;', '<Esc><S-a>')
+vim.keymap.set('i', 'ja', '<Esc>la')
+vim.keymap.set('i', 'jl', '<Esc><S-a>')
+vim.keymap.set('i', 'jo', '<Esc>o')
 
---editor
+-- editor
 vim.opt.cursorline = false
 vim.opt.guicursor = ''
 
---set termguicolors
+-- set termguicolors
 vim.opt.background = 'dark'
 
 -- nvim-tree
