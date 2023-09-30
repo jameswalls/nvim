@@ -22,6 +22,8 @@ vim.opt.colorcolumn = '80'
 
 --insert mode remaps 
 vim.keymap.set('i', 'jk', '<Esc>')
+vim.keymap.set('i', 'jl', '<Esc>la')
+vim.keymap.set('i', 'j;', '<Esc><S-a>')
 
 --editor
 vim.opt.cursorline = false
