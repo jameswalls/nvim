@@ -102,20 +102,11 @@ return require('packer').startup(
 		-- parenthesis
 		use 'HiPhish/rainbow-delimiters.nvim'
 
-		-- transparent vim
-		-- use 'xiyaowong/nvim-transparent'
-
 		-- autopairs
 		use { "windwp/nvim-autopairs" }
 
 		-- colorschemes
-		use 'Mofiqul/vscode.nvim'
-		use { "catppuccin/nvim", as = "catppuccin" }
-		use({ 'rose-pine/neovim', as = 'rose-pine' })
-		use 'nyoom-engineering/oxocarbon.nvim'
-		use 'shaunsingh/nord.nvim'
-		use 'AlexvZyl/nordic.nvim'
-		use 'loctvl842/monokai-pro.nvim'
+		use 'gbprod/nord.nvim'
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
