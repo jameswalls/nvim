@@ -22,10 +22,6 @@ vim.opt.colorcolumn = '80'
 
 -- insert mode remaps 
 vim.keymap.set('i', 'jk', '<Esc>')
-vim.keymap.set('i', 'ja', '<Esc>la')
-vim.keymap.set('i', 'ji', '<Esc>i')
-vim.keymap.set('i', 'jl', '<Esc><S-a>')
-vim.keymap.set('i', 'jo', '<Esc>o')
 
 -- buffer navigation
 vim.keymap.set('n', '<space>n', ':bnext<Cr>') -- next buffer
