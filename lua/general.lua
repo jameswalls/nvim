@@ -51,11 +51,11 @@ local rainbow_colors = function()
 	vim.api.nvim_set_hl(0, 'NordFrost2', {fg = '#88C0D0'})
 	vim.api.nvim_set_hl(0, 'NordFrost3', {fg = '#81A1C1'})
 	vim.api.nvim_set_hl(0, 'NordFrost4', {fg = '#5E81AC'})
-	vim.api.nvim_set_hl(0, 'NordAurora1', {fg = '#BF616A'})
-	vim.api.nvim_set_hl(0, 'NordAurora2', {fg = '#D08770'})
-	vim.api.nvim_set_hl(0, 'NordAurora3', {fg = '#EBCB8B'})
-	vim.api.nvim_set_hl(0, 'NordAurora4', {fg = '#A3BE8C'})
-	vim.api.nvim_set_hl(0, 'NordAurora5', {fg = '#B48EAD'})
+	vim.api.nvim_set_hl(0, 'NordAuroraRed', {fg = '#BF616A'})
+	vim.api.nvim_set_hl(0, 'NordAuroraOrange', {fg = '#D08770'})
+	vim.api.nvim_set_hl(0, 'NordAuroraYellow', {fg = '#EBCB8B'})
+	vim.api.nvim_set_hl(0, 'NordAuroraGreen', {fg = '#A3BE8C'})
+	vim.api.nvim_set_hl(0, 'NordAuroraPurple', {fg = '#B48EAD'})
 end
 
 vim.api.nvim_create_autocmd('ColorScheme', {
