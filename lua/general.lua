@@ -17,7 +17,7 @@ vim.opt.ts = 4
 vim.opt.sw = 4
 vim.opt.showmatch = true
 vim.opt.scrolloff = 4
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.colorcolumn = '80'
 
 -- insert mode remaps 
