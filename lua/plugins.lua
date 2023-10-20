@@ -116,6 +116,7 @@ return require('packer').startup(
 		use { "windwp/nvim-autopairs" }
 
 		-- colorschemes
+		use { "catppuccin/nvim", as = "catppuccin" }
 		use 'gbprod/nord.nvim'
 
 		-- Put this at the end after all plugins
