@@ -10,9 +10,9 @@ require('telescope').setup{
 		sorting_strategy = "ascending",
 
 		layout_strategy = "bottom_pane",
-		layout_config = {
-			height = 35,
-		},
+		-- layout_config = {
+		-- 	height = 35,
+		-- },
 
 		border = true,
 		borderchars = {
