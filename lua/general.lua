@@ -23,10 +23,6 @@ vim.opt.colorcolumn = '80'
 -- insert mode remaps 
 vim.keymap.set('i', 'jk', '<Esc>')
 
--- buffer navigation
-vim.keymap.set('n', '<space>n', ':bnext<Cr>') -- next buffer
-vim.keymap.set('n', '<space>p', ':bprevious<Cr>') -- previous buffer
-
 -- editor
 vim.opt.cursorline = false
 vim.opt.guicursor = ''
