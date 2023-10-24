@@ -1,7 +1,7 @@
 
 require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       auto_reload_on_write = true,
-      disable_netrw = false,
+      disable_netrw = true,
       hijack_cursor = false,
       hijack_netrw = true,
       hijack_unnamed_buffer_when_opening = false,
@@ -17,12 +17,24 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         centralize_selection = false,
         cursorline = true,
         debounce_delay = 15,
-        width = 30,
+        width = 80,
         side = "left",
         preserve_window_proportions = false,
         number = false,
         relativenumber = true,
-        signcolumn = "yes"
+        signcolumn = "yes",
+		float = {
+			enable = false,
+			quit_on_focus_loss = true,
+			open_win_config = {
+				relative = "editor",
+				border = "rounded",
+				width = 50,
+				height = 20,
+				row = 10,
+				col = 10,
+			},
+		},
     	},
       renderer = {
         add_trailing = false,
@@ -160,7 +172,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           },
         },
         open_file = {
-          quit_on_open = false,
+          quit_on_open = true,
           resize_window = true,
           window_picker = {
             enable = true,
@@ -220,3 +232,4 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       },
 } -- END_DEFAULT_OPTS
 
+vim.keymap.set('n', '<leader>tt', '<cmd>NvimTreeToggle<cr>')
