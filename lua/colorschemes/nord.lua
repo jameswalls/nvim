@@ -40,4 +40,4 @@ require("nord").setup({
   -- on_highlights = function(highlights, colors) end,
 })
 
-vim.cmd[[colorscheme nord]]
+vim.cmd.colorscheme "nord"

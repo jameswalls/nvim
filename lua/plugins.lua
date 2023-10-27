@@ -120,6 +120,7 @@ return require('packer').startup(
 		-- colorschemes
 		use { "catppuccin/nvim", as = "catppuccin" }
 		use 'gbprod/nord.nvim'
+		use({ 'rose-pine/neovim', as = 'rose-pine' })
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
