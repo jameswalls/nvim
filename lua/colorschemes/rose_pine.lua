@@ -1,12 +1,12 @@
 require('rose-pine').setup({
 	--- @usage 'auto'|'main'|'moon'|'dawn'
-	variant = 'auto',
+	variant = 'main',
 	--- @usage 'main'|'moon'|'dawn'
 	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = true,
-	disable_float_background = false,
+	disable_float_background = true,
 	disable_italics = true,
 
 	--- @usage string hex value or named color from rosepinetheme.com/palette
@@ -41,7 +41,6 @@ require('rose-pine').setup({
 	-- https://github.com/rose-pine/neovim/wiki/Recipes
 	highlight_groups = {
 		-- ColorColumn = { bg = 'rose' },
-		--
 		-- -- Blend colours against the "base" background
 		-- CursorLine = { bg = 'foam', blend = 10 },
 		-- StatusLine = { fg = 'love', bg = 'love', blend = 10 },
@@ -50,6 +49,7 @@ require('rose-pine').setup({
 		-- -- If you only want to set what is written in this config exactly,
 		-- -- you can set the inherit option:
 		-- Search = { bg = 'gold', inherit = false },
+		['@variable.builtin'] = { fg = 'text' }
 	}
 })
 
