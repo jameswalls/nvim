@@ -1,3 +1,5 @@
+-- local mocha = require("catppuccin.palettes").get_palette "mocha"
+
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -31,6 +33,13 @@ require("catppuccin").setup({
     },
     color_overrides = {},
     custom_highlights = {},
+	highlight_overrides = {
+		mocha = function(mocha)
+			return {
+                ["@variable.builtin"] = { fg=mocha.text },
+			}
+		end
+	},
     integrations = {
         cmp = true,
         gitsigns = true,
