@@ -36,6 +36,7 @@ require("catppuccin").setup({
 	highlight_overrides = {
 		mocha = function(mocha)
 			return {
+                ["@variable"] = { fg=mocha.text },
                 ["@variable.builtin"] = { fg=mocha.text },
 			}
 		end

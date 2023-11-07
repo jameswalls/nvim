@@ -11,7 +11,7 @@ vim.cmd([[au FileType * set fo-=c fo-=r fo-=o]])
 
 -- layout
 vim.opt.relativenumber = true
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.ts = 4
 vim.opt.sw = 4
