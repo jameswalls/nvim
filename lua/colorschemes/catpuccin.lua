@@ -33,14 +33,14 @@ require("catppuccin").setup({
     },
     color_overrides = {},
     custom_highlights = {},
-	highlight_overrides = {
-		mocha = function(mocha)
-			return {
-                ["@variable"] = { fg=mocha.text },
-                ["@variable.builtin"] = { fg=mocha.text },
-			}
-		end
-	},
+	-- highlight_overrides = {
+	-- 	mocha = function(mocha)
+	-- 		return {
+	--                 ["@variable"] = { fg=mocha.text },
+	--                 ["@variable.builtin"] = { fg=mocha.text },
+	-- 		}
+	-- 	end
+	-- },
     integrations = {
         cmp = true,
         gitsigns = true,
