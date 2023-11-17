@@ -78,7 +78,6 @@ return require('packer').startup(
 		use 'nvim-tree/nvim-web-devicons'
 		use 'rafamadriz/friendly-snippets'
 
-		use 'nvim-lua/lsp-status.nvim'
 		----------------------------------------------------------------------
 		-- nvim-tree
 		----------------------------------------------------------------------
