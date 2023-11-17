@@ -78,6 +78,7 @@ return require('packer').startup(
 		use 'nvim-tree/nvim-web-devicons'
 		use 'rafamadriz/friendly-snippets'
 
+		use 'nvim-lua/lsp-status.nvim'
 		----------------------------------------------------------------------
 		-- nvim-tree
 		----------------------------------------------------------------------
@@ -112,7 +113,7 @@ return require('packer').startup(
 		}
 
 		-- parenthesis
-		use 'HiPhish/rainbow-delimiters.nvim'
+		-- use 'HiPhish/rainbow-delimiters.nvim'
 
 		-- autopairs
 		use { "windwp/nvim-autopairs" }
