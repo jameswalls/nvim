@@ -68,6 +68,7 @@ require("nord").setup({
 	hi["@operator"] = { fg = c.frost.polar_water }
 	hi["@variable.builtin"] = { fg = c.snow_storm.origin }
 	hi["@field"] = { fg = c.frost.ice }
+	hi["@constant"] = { fg = c.aurora.yellow }
   end,
 })
 
