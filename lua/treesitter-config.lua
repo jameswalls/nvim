@@ -1,6 +1,15 @@
 -- TS config
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "lua", "vim", "vimdoc", "query", "python", "scala", "json", "rust"},
+	ensure_installed = {
+		"lua",
+		"vim",
+		"vimdoc",
+		"query",
+		"python",
+		"scala",
+		"json",
+		"rust"
+	},
 
 	sync_install = false,
 

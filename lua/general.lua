@@ -29,6 +29,7 @@ vim.opt.guicursor = ''
 
 -- set termguicolors
 vim.opt.background = 'dark'
+vim.highlight.priorities.semantic_tokens = 95
 
 -- nvim-tree
 vim.opt.termguicolors = true

@@ -112,7 +112,7 @@ return require('packer').startup(
 		}
 
 		-- parenthesis
-		-- use 'HiPhish/rainbow-delimiters.nvim'
+		use 'HiPhish/rainbow-delimiters.nvim'
 
 		-- autopairs
 		use { "windwp/nvim-autopairs" }
