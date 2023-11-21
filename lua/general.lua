@@ -24,8 +24,9 @@ vim.opt.colorcolumn = '80'
 vim.keymap.set('i', 'jk', '<Esc>')
 
 -- editor
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.guicursor = ''
+vim.opt.cursorlineopt = "number"
 
 -- set termguicolors
 vim.opt.background = 'dark'

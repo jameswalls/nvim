@@ -70,7 +70,16 @@ require("nord").setup({
 	hi["@variable.builtin"] = { fg = c.snow_storm.origin }
 	hi["@parameter"] = { fg = c.snow_storm.origin }
 	hi["@field"] = { fg = c.frost.ice }
-	hi["@constant"] = { fg = c.aurora.purple }
+	hi["@constant"] = { fg = c.aurora.yellow }
+	hi["@punctuation.bracket"] = { fg = c.frost.artic_ocean }
+	hi["@keyword"] = { fg = c.aurora.purple }
+	hi["@keyword.function"] = { fg = c.frost.artic_ocean }
+	hi["@keyword.operator"] = { fg = c.frost.artic_ocean }
+	hi["@keyword.return"] = { fg = c.frost.artic_ocean }
+	hi["@conditional"] = { fg = c.aurora.purple }
+	hi["@repeat"] = { fg = c.aurora.purple }
+	hi["@function.macro"] = { fg = c.frost.ice }
+	hi["@include"] = { fg = c.aurora.purple }
   end,
 })
 
