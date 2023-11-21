@@ -66,12 +66,11 @@ require("nord").setup({
 
   on_highlights = function(hi, c)
 	hi["@operator"] = { fg = c.frost.artic_ocean }
-	hi["@variable.builtin"] = { fg = c.aurora.purple }
-	hi["@parameter"] = { fg = c.aurora.purple }
-	-- hi["@variable.builtin"] = { fg = c.snow_storm.origin }
+	hi["@variable"] = { fg = c.snow_storm.origin }
+	hi["@variable.builtin"] = { fg = c.snow_storm.origin }
+	hi["@parameter"] = { fg = c.snow_storm.origin }
 	hi["@field"] = { fg = c.frost.ice }
-	hi["@constant"] = { fg = c.aurora.yellow }
-	hi["@punctuation.bracket"] = { fg = c.snow_storm.origin }
+	hi["@constant"] = { fg = c.aurora.purple }
   end,
 })
 
