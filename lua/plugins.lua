@@ -122,6 +122,7 @@ return require('packer').startup(
 		use 'gbprod/nord.nvim'
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use 'Mofiqul/vscode.nvim'
+		use 'luisiacc/the-matrix.nvim'
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
