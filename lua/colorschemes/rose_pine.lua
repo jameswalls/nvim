@@ -1,6 +1,6 @@
 require('rose-pine').setup({
 	--- @usage 'auto'|'main'|'moon'|'dawn'
-	variant = 'main',
+	variant = 'auto',
 	--- @usage 'main'|'moon'|'dawn'
 	dark_variant = 'main',
 	bold_vert_split = false,
@@ -49,7 +49,11 @@ require('rose-pine').setup({
 		-- -- If you only want to set what is written in this config exactly,
 		-- -- you can set the inherit option:
 		-- Search = { bg = 'gold', inherit = false },
-		['@variable.builtin'] = { fg = 'text' }
+		['@variable.builtin'] = { fg='text', inherit='text'},
+		['@boolean'] = { fg='Love', inherit=false },
+		['@number'] = { fg='Love', inherit=false },
+		['@namespace'] = { fg='rose', inherit=false },
+		['@type'] = { fg='rose', inherit=false },
 	}
 })
 
