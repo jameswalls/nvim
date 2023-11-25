@@ -49,11 +49,12 @@ require('rose-pine').setup({
 		-- -- If you only want to set what is written in this config exactly,
 		-- -- you can set the inherit option:
 		-- Search = { bg = 'gold', inherit = false },
-		['@variable.builtin'] = { fg='text', inherit='text'},
+		['@variable.builtin'] = { fg='text', inherit=false },
 		['@boolean'] = { fg='Love', inherit=false },
 		['@number'] = { fg='Love', inherit=false },
 		['@namespace'] = { fg='rose', inherit=false },
 		['@type'] = { fg='rose', inherit=false },
+		['@function.call'] = { fg='iris', inherit=false}
 	}
 })
 
