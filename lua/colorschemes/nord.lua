@@ -66,7 +66,7 @@ require("nord").setup({
 
   on_highlights = function(hi, c)
 	hi["@conditional"] = { fg = c.aurora.purple }
-	hi["@constant"] = { fg = c.frost.artic_water }
+	hi["@constant"] = { fg = c.aurora.orange }
 	hi["@constant.builtin"] = { fg = c.aurora.orange }
 	hi["@field"] = { fg = c.frost.artic_water }
 	hi["@function"] = { fg = c.frost.polar_water }
@@ -78,6 +78,7 @@ require("nord").setup({
 	hi["@keyword.operator"] = { fg = c.aurora.purple }
 	hi["@keyword.return"] = { fg = c.aurora.purple }
 	hi["@namespace"] = { fg = c.frost.polar_water}
+	hi["@number"] = { fg = c.aurora.orange }
 	hi["@operator"] = { fg = c.frost.ice }
 	hi["@parameter"] = { fg = c.snow_storm.origin }
 	hi["@punctuation.bracket"] = { fg = c.frost.ice }
