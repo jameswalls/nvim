@@ -9,8 +9,8 @@ require('telescope').setup{
 		-- global ivy selection
 		sorting_strategy = "ascending",
 
-		layout_strategy = "flex",
-		-- layout_config = {
+		layout_strategy = "vertical",
+		-- -- layout_config = {
 		-- 	height = 35,
 		-- },
 
@@ -21,6 +21,12 @@ require('telescope').setup{
 			preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 		},
 	},
+
+	pickers = {
+		find_files = {
+			theme = "dropdown",
+		}
+	},
 }
 
 -- additional extensions
@@ -28,8 +34,8 @@ require('telescope').load_extension('fzf')
 require("telescope").load_extension('harpoon')
 
 -- Find files using Telescope command-line sugar.
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope git_files<cr>')
-vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files<cr>')
+vim.keymap.set('n', '<leader>gf', '<cmd>Telescope git_files<cr>')
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 vim.keymap.set('n', '<leader>gs', '<cmd>Telescope grep_string<cr>')
