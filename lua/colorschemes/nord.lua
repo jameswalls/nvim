@@ -65,29 +65,31 @@ require("nord").setup({
   -- none = "NONE",
 
   on_highlights = function(hi, c)
-	hi["@operator"] = { fg = c.frost.ice }
-	hi["@variable"] = { fg = c.snow_storm.origin }
-	hi["@variable.builtin"] = { fg = c.snow_storm.origin }
-	hi["@parameter"] = { fg = c.snow_storm.origin }
+	hi["@conditional"] = { fg = c.aurora.purple }
+	hi["@constant"] = { fg = c.frost.artic_water }
+	hi["@constant.builtin"] = { fg = c.aurora.orange }
 	hi["@field"] = { fg = c.frost.artic_water }
 	hi["@function"] = { fg = c.frost.polar_water }
-	hi["@string"] = { fg = c.aurora.green }
-	hi["@type"] = { fg = c.frost.polar_water }
-	hi["@type.builtin"] = { fg = c.frost.artic_water }
-	hi["@type.qualifier"] = { fg = c.aurora.purple }
 	hi["@function.call"] = { fg = c.frost.artic_water }
-	hi["@constant"] = { fg = c.frost.artic_water }
-	hi["@punctuation.bracket"] = { fg = c.frost.ice }
+	hi["@function.macro"] = { fg = c.frost.artic_water }
+	hi["@include"] = { fg = c.aurora.purple }
 	hi["@keyword"] = { fg = c.aurora.purple }
 	hi["@keyword.function"] = { fg = c.aurora.purple }
 	hi["@keyword.operator"] = { fg = c.aurora.purple }
 	hi["@keyword.return"] = { fg = c.aurora.purple }
-	hi["@conditional"] = { fg = c.aurora.purple }
-	hi["@repeat"] = { fg = c.aurora.purple }
-	hi["@function.macro"] = { fg = c.frost.artic_water }
-	hi["@include"] = { fg = c.aurora.purple }
-	hi["@punctuation.delimiter"] = { fg = c.frost.ice }
 	hi["@namespace"] = { fg = c.frost.polar_water}
+	hi["@operator"] = { fg = c.frost.ice }
+	hi["@parameter"] = { fg = c.snow_storm.origin }
+	hi["@punctuation.bracket"] = { fg = c.frost.ice }
+	hi["@punctuation.delimiter"] = { fg = c.frost.ice }
+	hi["@repeat"] = { fg = c.aurora.purple }
+	hi["@string"] = { fg = c.aurora.green }
+	hi["@type"] = { fg = c.frost.polar_water }
+	hi["@type.builtin"] = { fg = c.frost.artic_water }
+	hi["@type.qualifier"] = { fg = c.aurora.purple }
+	hi["@variable"] = { fg = c.snow_storm.origin }
+	hi["@variable.builtin"] = { fg = c.snow_storm.origin }
+
   end,
 })
 
