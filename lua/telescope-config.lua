@@ -4,12 +4,12 @@ require('telescope').setup{
 	defaults = {
 		prompt_prefix = "> ",
 		wrap_results = true,
-		path_display = {"absolute"},
+		path_display = {"truncate"},
 
 		-- global ivy selection
 		sorting_strategy = "ascending",
 
-		layout_strategy = "bottom_pane",
+		layout_strategy = "flex",
 		-- layout_config = {
 		-- 	height = 35,
 		-- },
@@ -41,6 +41,7 @@ vim.keymap.set('n', '<leader>dg', '<cmd>Telescope diagnostics<cr>')
 vim.keymap.set('n', '<leader>fc', '<cmd>Telescope commands<cr>')
 vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', '<leader>hh', '<cmd>Telescope harpoon marks<cr>')
+vim.keymap.set('n', '<leader>td', '<cmd>TodoTelescope <cr>')
 
 
 
