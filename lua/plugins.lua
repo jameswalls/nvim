@@ -123,6 +123,7 @@ return require('packer').startup(
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use 'Mofiqul/vscode.nvim'
 		use 'luisiacc/the-matrix.nvim'
+		use 'navarasu/onedark.nvim'
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
