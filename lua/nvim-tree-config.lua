@@ -14,7 +14,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       on_attach = "default",
       select_prompts = false,
       view = {
-        centralize_selection = false,
+        centralize_selection = true,
         cursorline = true,
         debounce_delay = 15,
         width = 100,
@@ -24,14 +24,14 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         relativenumber = true,
         signcolumn = "yes",
 		float = {
-			enable = false,
-			quit_on_focus_loss = true,
+			enable = true,
+			quit_on_focus_loss = false,
 			open_win_config = {
 				relative = "editor",
 				border = "rounded",
-				width = 50,
+				width = 100,
 				height = 20,
-				row = 10,
+				row = 1,
 				col = 10,
 			},
 		},
@@ -232,4 +232,4 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       },
 } -- END_DEFAULT_OPTS
 
-vim.keymap.set('n', '<leader>tt', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set('n', '<leader>ft', '<cmd>NvimTreeToggle<cr>')

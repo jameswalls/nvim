@@ -7,9 +7,9 @@ require('telescope').setup{
 		path_display = {"truncate"},
 
 		-- global ivy selection
-		sorting_strategy = "ascending",
+		sorting_strategy = "descending",
 
-		layout_strategy = "vertical",
+		-- layout_strategy = "vertical",
 		-- -- layout_config = {
 		-- 	height = 35,
 		-- },
