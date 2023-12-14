@@ -1,33 +1,5 @@
 -- initial telescope
-require('telescope').setup{
-
-	defaults = {
-		prompt_prefix = "> ",
-		wrap_results = true,
-		path_display = {"truncate"},
-
-		-- global ivy selection
-		sorting_strategy = "descending",
-
-		-- layout_strategy = "vertical",
-		-- -- layout_config = {
-		-- 	height = 35,
-		-- },
-
-		border = true,
-		borderchars = {
-			prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
-			results = { " " },
-			preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-		},
-	},
-
-	pickers = {
-		find_files = {
-			theme = "dropdown",
-		}
-	},
-}
+require('telescope').setup{}
 
 -- additional extensions
 require('telescope').load_extension('fzf')
