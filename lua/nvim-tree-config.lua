@@ -232,5 +232,5 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       },
 } -- END_DEFAULT_OPTS
 
-vim.keymap.set('n', '<leader>ft', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set('n', '<leader>tt', '<cmd>NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>cf', '<cmd>NvimTreeFindFile<cr>')

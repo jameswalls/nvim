@@ -53,7 +53,11 @@ return require('packer').startup(
 			requires = { {'nvim-lua/plenary.nvim'} }
 		}
 
-		use { 'ThePrimeagen/harpoon' }
+		use {
+			"ThePrimeagen/harpoon",
+			branch = "harpoon2",
+			requires = { { "nvim-lua/plenary.nvim" } }
+		}
 		use 'folke/todo-comments.nvim'
 		----------------------------------------------------------------------
 		-- lsp
