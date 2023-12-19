@@ -3,7 +3,6 @@ require('telescope').setup{}
 
 -- additional extensions
 require('telescope').load_extension('fzf')
--- require("telescope").load_extension('harpoon')
 
 -- Find files using Telescope command-line sugar.
 vim.keymap.set('n', '<leader>gf', '<cmd>Telescope git_files<cr>')
