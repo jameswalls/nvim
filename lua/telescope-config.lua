@@ -18,7 +18,6 @@ vim.keymap.set('n', '<leader>gi', '<cmd>Telescope lsp_implementation<cr>')
 vim.keymap.set('n', '<leader>dg', '<cmd>Telescope diagnostics<cr>')
 vim.keymap.set('n', '<leader>cc', '<cmd>Telescope commands<cr>')
 vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>')
--- vim.keymap.set('n', '<leader>hh', '<cmd>Telescope harpoon marks<cr>')
 vim.keymap.set('n', '<leader>to', '<cmd>TodoTelescope <cr>')
 
 
