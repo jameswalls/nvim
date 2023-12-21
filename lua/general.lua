@@ -64,4 +64,4 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   group = augroup,
   desc = 'Add rainbow highlights for rainbow-delimiters',
   callback = rainbow_colors
-}
+})

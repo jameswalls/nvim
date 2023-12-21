@@ -128,6 +128,7 @@ return require('packer').startup(
 		use 'Mofiqul/vscode.nvim'
 		use 'luisiacc/the-matrix.nvim'
 		use 'navarasu/onedark.nvim'
+		use "folke/tokyonight.nvim"
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
