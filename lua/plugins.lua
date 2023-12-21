@@ -55,7 +55,6 @@ return require('packer').startup(
 
 		use {
 			"ThePrimeagen/harpoon",
-			branch = "harpoon2",
 			requires = { { "nvim-lua/plenary.nvim" } }
 		}
 		use 'folke/todo-comments.nvim'
