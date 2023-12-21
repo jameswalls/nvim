@@ -11,6 +11,7 @@ vim.cmd([[au FileType * set fo-=c fo-=r fo-=o]])
 
 -- layout
 vim.opt.relativenumber = true
+vim.o.statuscolumn = "%s%l  %r "
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.ts = 4
@@ -63,4 +64,4 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   group = augroup,
   desc = 'Add rainbow highlights for rainbow-delimiters',
   callback = rainbow_colors
-})
+}
