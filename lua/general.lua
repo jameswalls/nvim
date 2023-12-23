@@ -11,7 +11,7 @@ vim.cmd([[au FileType * set fo-=c fo-=r fo-=o]])
 
 -- layout
 vim.opt.relativenumber = true
-vim.o.statuscolumn = "%s%l  %r "
+vim.o.statuscolumn = "%s%l %@SignCb@%s%=%T%@NumCb@%r│ %T"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.ts = 4
