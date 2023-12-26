@@ -19,7 +19,7 @@ vim.opt.sw = 4
 vim.opt.showmatch = true
 vim.opt.scrolloff = 4
 vim.opt.wrap = false
-vim.opt.colorcolumn = '80'
+-- vim.opt.colorcolumn = '80'
 
 -- insert mode remaps 
 vim.keymap.set('i', 'jk', '<Esc>')
