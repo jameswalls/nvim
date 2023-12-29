@@ -51,23 +51,23 @@ cmp.setup({
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
 		['<Cr>'] = cmp.mapping.confirm({
-			behavior = cmp.ConfirmBehavior.Replace,
+			behavior = cmp.ConfirmBehavior.Insert,
 			select = true
 		}),
 		["C-n"] = cmp.mapping(
 			function(fallback)
 				if cmp.visible() then
-					cmp.select_next_item()
-				elseif luasnip.expand_or_jumpable() then
-					luasnip.expand_or_jump()
-				elseif has_words_before() then
-					cmp.complete()
+					local entry = cmp.get_selected_entry()
+					if not entry then
+						cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+					else
+						cmp.confirm()
+					end
 				else
 					fallback()
 				end
 			end,
-			{ "i", "s" }
-		),
+			{ "i", "s" }),
 		["C-p"] = cmp.mapping(
 			function(fallback)
 				if cmp.visible() then
@@ -78,8 +78,7 @@ cmp.setup({
 					fallback()
 				end
 			end,
-			{ "i", "s" }
-		),
+			{ "i", "s" }),
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
@@ -97,7 +96,7 @@ cmp.setup({
 		end
 	},
 	sources = {
-	  { name = "nvim_lsp"},
+	  { name = "nvim_lsp", keyword_length = 1},
 	  -- { name = "buffer" },
 	  -- { name = "luasnip"},
 	  { name = "path" },
