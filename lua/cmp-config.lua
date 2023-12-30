@@ -36,9 +36,11 @@ cmp.setup({
 			require('luasnip').lsp_expand(args.body)
 		end,
 	},
+	view = {
+		entries = { "custom", selection_order = "near_cursor" },
+	},
 	window = {
-		-- completion = cmp.config.window.bordered(),
-		-- documentation = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
@@ -61,7 +63,7 @@ cmp.setup({
 			vim_item.menu = ({
 				nvim_lsp = "[Lsp]",
 				luasnip = "[Luasnip]",
-				buffer = "[Buffer]",
+				-- buffer = "[Buffer]",
 				path = "[Path]"
 			})[entry.source.name]
 
