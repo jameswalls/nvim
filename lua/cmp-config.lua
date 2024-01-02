@@ -37,7 +37,7 @@ cmp.setup({
 		end,
 	},
 	view = {
-		entries = { "custom", selection_order = "near_cursor" },
+		entries = { "custom" },
 	},
 	window = {
 		documentation = cmp.config.window.bordered(),
