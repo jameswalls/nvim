@@ -57,15 +57,7 @@ require'nvim-treesitter.configs'.setup {
 			},
 			include_surrounding_whitespace = true,
 		},
-		swap = {
-			-- enable = false,
-			-- swap_next = {
-			-- 	["<leader>a"] = "@parameter.inner",
-			-- },
-			-- swap_previous = {
-			-- 	["<leader>A"] = "@parameter.inner",
-			-- },
-		},
+		swap = {},
 		move = {
 			enable = true,
 			set_jumps = true, -- whether to set jumps in the jumplist
