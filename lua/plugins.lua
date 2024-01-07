@@ -109,7 +109,7 @@ return require('packer').startup(
 		-- themes & layout
 		----------------------------------------------------------------------
 		-- tmux navigation
-		use 'christoomey/vim-tmux-navigator'
+		-- use 'christoomey/vim-tmux-navigator'
 
 		-- lualine
 		use {
