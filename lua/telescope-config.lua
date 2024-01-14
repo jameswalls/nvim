@@ -1,5 +1,13 @@
 -- initial telescope
-require('telescope').setup{}
+require('telescope').setup({
+	defaults = {
+		layout_strategy = "flex",
+		layout_config = {
+			height = 0.9
+		},
+		wrap_results = true
+	}
+})
 
 -- additional extensions
 require('telescope').load_extension('fzf')
