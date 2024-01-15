@@ -26,6 +26,4 @@ vim.keymap.set('n', '<leader>dg', '<cmd>Telescope diagnostics<cr>')
 vim.keymap.set('n', '<leader>cc', '<cmd>Telescope commands<cr>')
 vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', '<leader>to', '<cmd>TodoTelescope <cr>')
-
-
-
+vim.keymap.set('n', '<leader>ss', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
