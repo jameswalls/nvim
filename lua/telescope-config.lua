@@ -5,16 +5,24 @@ require('telescope').setup({
 		layout_config = {
 			height = 0.9
 		},
-		wrap_results = true
+		wrap_results = true,
+	},
+	extensions = {
+		fzf = {
+			fuzzy = true,
+			override_generic_sorter = true,
+			override_file_sorter = true,
+			case_mode = "smart_case",
+		}
 	}
 })
 
 -- additional extensions
-require('telescope').load_extension('fzf')
+require("telescope").load_extension("fzf")
 
 -- Find files using Telescope command-line sugar.
-vim.keymap.set('n', '<leader>gf', '<cmd>Telescope git_files<cr>')
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope git_files<cr>')
+vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files<cr>')
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 vim.keymap.set('n', '<leader>gs', '<cmd>Telescope grep_string<cr>')
@@ -27,3 +35,4 @@ vim.keymap.set('n', '<leader>cc', '<cmd>Telescope commands<cr>')
 vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', '<leader>to', '<cmd>TodoTelescope <cr>')
 vim.keymap.set('n', '<leader>ss', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
+vim.keymap.set('n', '<leader>cs', '<cmd>Telescope colorscheme<cr>')
