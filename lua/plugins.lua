@@ -132,6 +132,7 @@ return require('packer').startup(
 		use 'navarasu/onedark.nvim'
 		use "folke/tokyonight.nvim"
 		use "projekt0n/github-nvim-theme"
+		use "aktersnurra/no-clown-fiesta.nvim"
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
