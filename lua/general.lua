@@ -65,3 +65,16 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   desc = 'Add rainbow highlights for rainbow-delimiters',
   callback = rainbow_colors
 })
+
+local ts_context_augroup = vim.api.nvim_create_augroup("TreeSitterContext", {clear = true})
+local treesitter_context_colors = function()
+	vim.api.nvim_set_hl(0, "TreesitterContext", { bg="#434C5E" })
+	vim.api.nvim_set_hl(0, "TreesitterContextBottom", { bg="#434C5E" })
+	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { bg="#434C5E" })
+end
+
+vim.api.nvim_create_autocmd('ColorScheme', {
+  group = ts_context_augroup,
+  desc = "Add highlights for treesitter context",
+  callback = treesitter_context_colors
+})
