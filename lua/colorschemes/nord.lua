@@ -93,4 +93,4 @@ require("nord").setup({
   end,
 })
 
-vim.cmd.colorscheme "nord"
+vim.cmd.colorscheme("nord")
