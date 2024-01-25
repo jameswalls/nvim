@@ -1,11 +1,21 @@
 -- initial telescope
 require('telescope').setup({
 	defaults = {
-		layout_strategy = "flex",
-		layout_config = {
-			height = 0.9
-		},
 		wrap_results = true,
+	},
+	pickers = {
+		git_files = {
+			theme = "dropdown"
+		},
+		find_files = {
+			theme = "dropdown"
+		},
+		live_grep = {
+			theme = "dropdown"
+		},
+		grep_string = {
+			theme = "dropdown"
+		}
 	},
 	extensions = {
 		fzf = {
