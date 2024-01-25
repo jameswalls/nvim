@@ -3,20 +3,6 @@ require('telescope').setup({
 	defaults = {
 		wrap_results = true,
 	},
-	pickers = {
-		git_files = {
-			theme = "dropdown"
-		},
-		find_files = {
-			theme = "dropdown"
-		},
-		live_grep = {
-			theme = "dropdown"
-		},
-		grep_string = {
-			theme = "dropdown"
-		}
-	},
 	extensions = {
 		fzf = {
 			fuzzy = true,
@@ -31,18 +17,18 @@ require('telescope').setup({
 require("telescope").load_extension("fzf")
 
 -- Find files using Telescope command-line sugar.
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope git_files<cr>')
-vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files<cr>')
-vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
-vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
-vim.keymap.set('n', '<leader>gs', '<cmd>Telescope grep_string<cr>')
-vim.keymap.set('n', '<leader>gd', '<cmd>Telescope lsp_definitions<cr>')
-vim.keymap.set('n', '<leader>td', '<cmd>Telescope lsp_type_definitions<cr>')
-vim.keymap.set('n', '<leader>gr', '<cmd>Telescope lsp_references<cr>')
-vim.keymap.set('n', '<leader>gi', '<cmd>Telescope lsp_implementation<cr>')
-vim.keymap.set('n', '<leader>dg', '<cmd>Telescope diagnostics<cr>')
-vim.keymap.set('n', '<leader>cc', '<cmd>Telescope commands<cr>')
-vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers<cr>')
-vim.keymap.set('n', '<leader>to', '<cmd>TodoTelescope <cr>')
-vim.keymap.set('n', '<leader>ss', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
-vim.keymap.set('n', '<leader>cs', '<cmd>Telescope colorscheme<cr>')
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope git_files theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>fa', '<cmd>Telescope find_files theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>gs', '<cmd>Telescope grep_string theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>gd', '<cmd>Telescope lsp_definitions theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>td', '<cmd>Telescope lsp_type_definitions theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>gr', '<cmd>Telescope lsp_references theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>gi', '<cmd>Telescope lsp_implementation theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>dg', '<cmd>Telescope diagnostics theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>cc', '<cmd>Telescope commands theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>bb', '<cmd>Telescope buffers theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>to', '<cmd>TodoTelescope  theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>ss', '<cmd>Telescope current_buffer_fuzzy_find theme=dropdown<cr>')
+vim.keymap.set('n', '<leader>cs', '<cmd>Telescope colorscheme theme=dropdown<cr>')
