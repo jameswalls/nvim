@@ -2,7 +2,7 @@
 require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       auto_reload_on_write = true,
       disable_netrw = true,
-      hijack_cursor = false,
+      hijack_cursor = true,
       hijack_netrw = true,
       hijack_unnamed_buffer_when_opening = false,
       sort_by = "name",
@@ -16,15 +16,15 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       view = {
         centralize_selection = true,
         cursorline = true,
-        debounce_delay = 15,
-        width = 100,
+        debounce_delay = 0,
+        width = 50,
         side = "left",
         preserve_window_proportions = false,
         number = false,
         relativenumber = true,
         signcolumn = "yes",
 		float = {
-			enable = true,
+			enable = false,
 			quit_on_focus_loss = false,
 			open_win_config = {
 				relative = "editor",
