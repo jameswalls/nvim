@@ -1,8 +1,8 @@
-require('rose-pine').setup({
+require("rose-pine").setup({
     variant = "auto", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
     dim_inactive_windows = false,
-    extend_background_behind_borders = true,
+    extend_background_behind_borders = false,
 
     styles = {
         bold = false,
@@ -46,20 +46,26 @@ require('rose-pine').setup({
     highlight_groups = {
         -- Comment = { fg = "foam" },
         -- VertSplit = { fg = "muted", bg = "muted" },
-		-- ['@boolean'] = { fg='love', inherit=false },
-		-- ['@field'] = { fg='iris', inherit=false },
-		-- ['@function.builtin'] = { fg='rose', inherit=false },
-		-- ['@function.call'] = { fg='rose', inherit=false },
-		-- ['@function.macro'] = { fg='rose', inherit=false },
-		-- ['@namespace'] = { fg='text', inherit=false },
-		-- ['@method.call'] = { fg='iris', inherit=false },
-		-- ['@number'] = { fg='love', inherit=false },
-		-- ['@parameter'] = { fg='foam', inherit=false },
-		-- ['@string'] = { fg='foam', inherit=false },
-		-- ['@type'] = { fg='text', inherit=false },
-		-- ['@type.builtin'] = { fg='iris', inherit=false },
-		-- ['@type.qualifier'] = { fg='iris', inherit=false },
-		-- ['@variable.builtin'] = { fg='foam', inherit=false },
+		["@boolean"] = { fg="love", inherit=false },
+		-- ["@field"] = { fg="iris", inherit=false },
+		["@function.builtin"] = { fg="rose", inherit=false },
+		-- ["@function.call"] = { fg="rose", inherit=false },
+		-- ["@function.macro"] = { fg="rose", inherit=false },
+		-- ["@namespace"] = { fg="text", inherit=false },
+		-- ["@method.call"] = { fg="iris", inherit=false },
+		["@number"] = { fg="love", inherit=false },
+		-- ["@parameter"] = { fg="foam", inherit=false },
+		["@variable.parameter"] = { fg="text", inherit=false },
+		["@type"] = { fg="rose", inherit=false },
+		["@keyword.operator"] = { fg="pine", inherit=false },
+		["@string"] = { fg="iris", inherit=false },
+		-- ["@type"] = { fg="text", inherit=false },
+		-- ["@type.builtin"] = { fg="subtle", inherit=false },
+		-- ["@type.qualifier"] = { fg="iris", inherit=false },
+		["@variable.builtin"] = { fg="foam", inherit=false },
+		["@spell"] = { fg="subtle", inherit=false },
+		["@constructor"] = { fg="rose", inherit=false },
+		["@attribute"] = { fg="text", inherit=false },
     },
 
     before_highlight = function(group, highlight, palette)
