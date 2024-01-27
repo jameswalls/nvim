@@ -59,7 +59,7 @@ require("rose-pine").setup({
 		["@variable.parameter"] = { fg="text", inherit=false },
 		["@type"] = { fg="rose", inherit=false },
 		["@keyword.operator"] = { fg="pine", inherit=false },
-		["@string"] = { fg="gold", inherit=false },
+		["@string"] = { fg="rose", inherit=false },
 		-- ["@type"] = { fg="text", inherit=false },
 		-- ["@type.builtin"] = { fg="subtle", inherit=false },
 		-- ["@type.qualifier"] = { fg="iris", inherit=false },
