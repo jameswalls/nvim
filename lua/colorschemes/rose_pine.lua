@@ -67,6 +67,7 @@ require("rose-pine").setup({
 		["@spell"] = { fg="subtle", inherit=false },
 		["@constructor"] = { fg="iris", inherit=false },
 		["@attribute"] = { fg="text", inherit=false },
+		["@character"] = { fg="rose", inherit=false },
     },
 
     before_highlight = function(group, highlight, palette)
