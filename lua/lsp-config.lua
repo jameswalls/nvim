@@ -38,11 +38,15 @@ require("lspconfig").lua_ls.setup {
 require("lspconfig").pylsp.setup {
 	on_attach = on_attach,
 	settings = {
-		pylsp = {
-			configurationSources = { "black" },
-			plugins = {
-				black = {
-					enabled = true
+	pylsp = {
+		configurationSources = {"flake8"},
+		plugins = {
+			pycodestyle = {
+				ignore = { "E501" },
+				flake8 = {
+					enabled = true,
+					exclude = { "*/.ipynb_checkpoints/*" },
+					ignore = { "E722", "E501"},		}
 				}
 			}
 		}
