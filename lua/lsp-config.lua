@@ -39,12 +39,10 @@ require("lspconfig").pylsp.setup {
 	on_attach = on_attach,
 	settings = {
 		pylsp = {
-			configurationSources = {"flake8"},
+			configurationSources = { "black" },
 			plugins = {
-				flake8 = {
-					enabled = true,
-					exclude = { "*/.ipynb_checkpoints/*" },
-					ignore = { "E722", "E501"},
+				black = {
+					enabled = true
 				}
 			}
 		}
