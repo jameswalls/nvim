@@ -36,8 +36,10 @@ vim.highlight.priorities.semantic_tokens = 95
 
 -- nvim-tree
 vim.opt.termguicolors = true
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+vim.keymap.set("n", "<leader>tt", ':Ex<Cr>')
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- custom highlights
 local augroup = vim.api.nvim_create_augroup('CustomRainbowColors', {clear = true})

@@ -41,7 +41,7 @@ require'nvim-treesitter.configs'.setup {
 
 	textobjects = {
 		select = {
-			enable = true,
+			enable = false,
 			lookahead = true,
 			keymaps = {
 				["af"] = "@function.outer",
@@ -59,8 +59,7 @@ require'nvim-treesitter.configs'.setup {
 		},
 		swap = {},
 		move = {
-			enable = true,
-			set_jumps = true, -- whether to set jumps in the jumplist
+			enable = false, set_jumps = true, -- whether to set jumps in the jumplist
 			goto_next_start = {
 				["]m"] = "@function.outer",
 				["]]"] = { query = "@class.outer", desc = "Next class start" },
