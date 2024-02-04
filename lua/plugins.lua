@@ -80,7 +80,6 @@ return require('packer').startup(
 
 		-- luasnip
 		use({"L3MON4D3/LuaSnip"})
-		use 'nvim-tree/nvim-web-devicons'
 
 		-- kind icons
 		use "onsails/lspkind.nvim"
