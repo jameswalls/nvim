@@ -37,7 +37,8 @@ vim.highlight.priorities.semantic_tokens = 95
 -- nvim-tree
 vim.opt.termguicolors = true
 vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
-vim.keymap.set("n", "<leader>tt", ':Ex<Cr>')
+vim.keymap.set("n", "<leader>tt", ':Rexplore<Cr>')
+vim.keymap.set("n", "<leader>cf", ':Explore<Cr>')
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 
