@@ -134,6 +134,7 @@ return require('packer').startup(
 		use "projekt0n/github-nvim-theme"
 		use "lunacookies/vim-colors-xcode"
 		use "cocopon/iceberg.vim"
+		use "water-sucks/darkrose.nvim"
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
