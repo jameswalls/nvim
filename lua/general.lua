@@ -42,6 +42,10 @@ vim.keymap.set("n", "<leader>cf", ':Explore<Cr>')
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 
+-- quickfix list
+vim.keymap.set("n", "<leader>]", ":cnext <Cr>")
+vim.keymap.set("n", "<leader>[", ":cprev <Cr>")
+
 -- custom highlights
 local augroup = vim.api.nvim_create_augroup('CustomRainbowColors', {clear = true})
 local rainbow_colors = function()
