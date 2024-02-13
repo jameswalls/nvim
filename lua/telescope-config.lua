@@ -9,6 +9,10 @@ require('telescope').setup({
 			override_generic_sorter = true,
 			override_file_sorter = true,
 			case_mode = "smart_case",
+		},
+		live_grep_args = {
+			auto_quoting = true, -- enable/disable auto-quoting
+			theme = "dropdown",
 		}
 	}
 })
@@ -18,7 +22,7 @@ require("telescope").load_extension("fzf")
 
 -- Find files using Telescope command-line sugar.
 vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files theme=dropdown<cr>')
-vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep theme=dropdown<cr>')
+vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>")
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags theme=dropdown<cr>')
 vim.keymap.set('n', '<leader>gs', '<cmd>Telescope grep_string theme=dropdown<cr>')
 vim.keymap.set('n', '<leader>gd', '<cmd>Telescope lsp_definitions theme=dropdown<cr>')

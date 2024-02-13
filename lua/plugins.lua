@@ -53,6 +53,7 @@ return require('packer').startup(
 			'nvim-telescope/telescope.nvim', tag = '0.1.5',
 			requires = { {'nvim-lua/plenary.nvim'} }
 		}
+		use "nvim-telescope/telescope-live-grep-args.nvim"
 
 		use {
 			"ThePrimeagen/harpoon",
