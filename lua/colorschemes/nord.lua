@@ -66,8 +66,13 @@ require("nord").setup({
 
   on_highlights = function(hi, c)
 	-- hi["@conditional"] = { fg = c.aurora.purple }
-	-- hi["@constant"] = { fg = c.aurora.orange }
-	-- hi["@constant.builtin"] = { fg = c.aurora.orange }
+	hi["@boolean"] = { fg = c.frost.artic_ocean }
+	hi["@constant.builtin"] = { fg = c.frost.artic_ocean }
+	-- hi["@spell"] = { fg = c.polar_night.nord3 }
+	hi["@spell"] = { fg = c.polar_night.light }
+	hi["@string.documentation"] = { fg = c.polar_night.nord3 }
+	hi["@type.builtin"] = { fg = c.polar_night.nord3 }
+	hi["@string"] = { fg = c.frost.polar_water }
 	-- hi["@field"] = { fg = c.frost.artic_water }
 	-- hi["@function"] = { fg = c.frost.polar_water }
 	-- hi["@function.call"] = { fg = c.frost.artic_water }
@@ -84,7 +89,6 @@ require("nord").setup({
 	-- hi["@punctuation.bracket"] = { fg = c.frost.ice }
 	-- hi["@punctuation.delimiter"] = { fg = c.frost.ice }
 	-- hi["@repeat"] = { fg = c.aurora.purple }
-	-- hi["@string"] = { fg = c.aurora.green }
 	-- hi["@type"] = { fg = c.frost.polar_water }
 	-- hi["@type.builtin"] = { fg = c.frost.artic_water }
 	-- hi["@type.qualifier"] = { fg = c.aurora.purple }
