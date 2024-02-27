@@ -10,7 +10,7 @@ require('vscode').setup({
     -- style = 'light'
 
     -- Enable transparent background
-    transparent = true,
+    transparent = false,
 
     -- Enable italic comment
     italic_comments = true,
@@ -29,6 +29,7 @@ require('vscode').setup({
         -- use colors from this colorscheme by requiring vscode.colors!
 		-- Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
 		-- Comments = { fg="#555555" }
+		["@type.builtin"] = { fg = c.vscBlueGreen }
     }
 })
 
