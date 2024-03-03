@@ -37,10 +37,13 @@ vim.highlight.priorities.semantic_tokens = 95
 -- nvim-tree
 vim.opt.termguicolors = true
 vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
-vim.keymap.set("n", "<leader>tt", ':Rexplore<Cr>')
-vim.keymap.set("n", "<leader>cf", ':Explore<Cr>')
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.netrw_banner = false
+vim.cmd([[
+    let g:netrw_list_hide = netrw_gitignore#Hide()
+]])
+vim.g.netrw_hide = true
+vim.keymap.set("n", "<leader>cf", ':Rexplore<Cr>')
+vim.keymap.set("n", "<leader>tt", ':Explore<Cr>')
 
 -- quickfix list
 vim.keymap.set("n", "<leader>]", ":cnext <Cr>")
