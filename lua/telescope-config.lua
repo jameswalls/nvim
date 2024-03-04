@@ -7,6 +7,9 @@ require('telescope').setup({
 		wrap_results = true,
 	},
 	pickers = {
+		find_files = {
+			theme = "dropdown"
+		},
 		colorscheme = {
 			enable_preview = true
 		},
@@ -23,7 +26,7 @@ require('telescope').setup({
 			case_mode = "smart_case",
 		},
 		live_grep_args = {
-			auto_quoting = false,
+			auto_quoting = true,
 			theme = "dropdown",
 			previewer = false
 		}
