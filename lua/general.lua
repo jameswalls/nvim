@@ -39,11 +39,10 @@ vim.opt.termguicolors = true
 vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 vim.g.netrw_banner = false
 vim.cmd([[
-    let g:netrw_list_hide = netrw_gitignore#Hide()
+    let g:netrw_list_hide = netrw_gitignore#Hide() .. '\(^\|\s\s\)\zs\.\S\+'
 ]])
 vim.g.netrw_hide = true
-vim.keymap.set("n", "<leader>cf", ':Rexplore<Cr>')
-vim.keymap.set("n", "<leader>tt", ':Explore<Cr>')
+vim.keymap.set("n", "<leader>tt", ':Rexplore<Cr>')
 
 -- quickfix list
 vim.keymap.set("n", "<leader>]", ":cnext <Cr>")
