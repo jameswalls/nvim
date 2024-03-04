@@ -23,7 +23,7 @@ require('telescope').setup({
 			case_mode = "smart_case",
 		},
 		live_grep_args = {
-			auto_quoting = true, -- enable/disable auto-quoting
+			auto_quoting = false,
 			theme = "dropdown",
 			previewer = false
 		}
