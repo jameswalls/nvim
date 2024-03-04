@@ -16,6 +16,7 @@ return require('packer').startup(
 		-- use "~/plugins/stackmap.nvim/"
 
 		use 'wbthomason/packer.nvim'
+		use "folke/neodev.nvim"
 
 		----------------------------------------------------------------------
 		-- comment
