@@ -1,58 +1,96 @@
-require('mason').setup()
-require('mason-lspconfig').setup({
-	ensure_installed = { 'lua_ls', 'pylsp', 'jedi_language_server', 'rust_analyzer'},
-	PATH = "prepend"
+vim.api.nvim_create_autocmd('LspAttach', {
+	group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
+	callback = function(event)
+		local map = function(keys, func, desc)
+			vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+		end
+
+		local telescope = require("telescope.builtin")
+		map('gd', telescope.lsp_definitions, '[G]oto [D]efinition')
+		map('gr', telescope.lsp_references, '[G]oto [R]eferences')
+		map('gI', telescope.lsp_implementations, '[G]oto [I]mplementation')
+		map('<leader>D', telescope.lsp_type_definitions, 'Type [D]efinition')
+		map('<leader>ds', telescope.lsp_document_symbols, '[D]ocument [S]ymbols')
+		map('<leader>ws', telescope.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+		map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+		map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+		map('K', vim.lsp.buf.hover, 'Hover Documentation')
+		map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+
+		local client = vim.lsp.get_client_by_id(event.data.client_id)
+		if client and client.server_capabilities.documentHighlightProvider then
+			vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+				buffer = event.buf,
+				callback = vim.lsp.buf.document_highlight,
+			})
+
+			vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+				buffer = event.buf,
+				callback = vim.lsp.buf.clear_references,
+			})
+		end
+	end,
 })
 
--- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
-local on_attach = function(_, bufnr)
-  -- Mappings.
-  local opts = { buffer = bufnr, noremap = true, silent = true }
-  vim.keymap.set("n", 'gD', vim.lsp.buf.declaration, opts)
-  vim.keymap.set("n", 'gd', vim.lsp.buf.definition, opts)
-  vim.keymap.set("n", 'K', vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", 'gi', vim.lsp.buf.implementation, opts)
-  vim.keymap.set("n", 'H', vim.lsp.buf.signature_help, opts)
-  vim.keymap.set("n", '<space>D', vim.lsp.buf.type_definition, opts)
-  vim.keymap.set("n", '<leader>rn', vim.lsp.buf.rename, opts)
-  vim.keymap.set("n", 'gr', vim.lsp.buf.references, opts)
-  vim.keymap.set("n", '<leader>e', vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", '[d', vim.diagnostic.goto_prev, opts)
-  vim.keymap.set("n", ']d', vim.diagnostic.goto_next, opts)
-  vim.keymap.set("n", '<leader>ca', vim.lsp.buf.code_action, opts)
-end
-
-require("lspconfig").lua_ls.setup {
-	on_attach = on_attach,
-	settings = {
-		Lua = {
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = {'vim'},
-			}
-		}
-	}
-}
-
-require("lspconfig").pylsp.setup {
-	on_attach = on_attach,
-	settings = {
+local servers = {
 	pylsp = {
-		configurationSources = {"flake8"},
-		plugins = {
-			pycodestyle = {
-				ignore = { "E501" },
-				flake8 = {
-					enabled = true,
-					exclude = { "*/.ipynb_checkpoints/*" },
-					ignore = { "E722", "E501"},		}
+		settings = {
+			pylsp = {
+				configurationSources = {"flake8"},
+				plugins = {
+					pycodestyle = {
+						ignore = { "E501" },
+						flake8 = {
+							enabled = true,
+							exclude = { "*/.ipynb_checkpoints/*" },
+							ignore = { "E722", "E501"},
+						}
+					}
 				}
 			}
 		}
-	}
+	},
+	rust_analyzer = {},
+	lua_ls = {
+		settings = {
+			Lua = {
+				runtime = { version = 'LuaJIT' },
+				workspace = {
+					checkThirdParty = false,
+					library = {
+						'${3rd}/luv/library',
+						unpack(vim.api.nvim_get_runtime_file('', true)),
+					},
+					-- If lua_ls is really slow on your computer, you can try this instead:
+					-- library = { vim.env.VIMRUNTIME },
+				},
+				completion = {
+					callSnippet = 'Replace',
+				},
+				diagnostics = { disable = { 'missing-fields' } },
+			},
+		},
+	},
 }
 
-require('lspconfig').rust_analyzer.setup{
-	on_attach = on_attach
+require('mason').setup()
+
+local ensure_installed = vim.tbl_keys(servers or {})
+vim.list_extend(ensure_installed, {
+	'stylua', -- Used to format lua code
+})
+
+require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
+require('mason-lspconfig').setup {
+	handlers = {
+		function(server_name)
+			local server = servers[server_name] or {}
+			server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+			require('lspconfig')[server_name].setup(server)
+		end,
+	},
 }
