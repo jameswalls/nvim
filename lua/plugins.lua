@@ -22,6 +22,7 @@ return require('packer').startup(
 		-- comment
 		----------------------------------------------------------------------
 		use 'terrortylor/nvim-comment'
+		use "laytan/cloak.nvim"
 
 		----------------------------------------------------------------------
 		-- treesitter
