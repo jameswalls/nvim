@@ -24,6 +24,9 @@ require('telescope').setup({
 		lsp_document_symbols = {
 			theme = "dropdown"
 		},
+		diagnostics = {
+			theme = "dropdown"
+		},
 	},
 	extensions = {
 		fzf = {
