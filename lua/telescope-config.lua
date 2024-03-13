@@ -4,7 +4,8 @@ local extensions = require("Telescope").extensions
 
 require('telescope').setup({
 	defaults = {
-		wrap_results = true,
+		wrap_results = false,
+		path_display = { "truncate" },
 	},
 	pickers = {
 		find_files = {
@@ -16,7 +17,13 @@ require('telescope').setup({
 		current_buffer_fuzzy_find = {
 			theme = "dropdown",
 			previewer = false
-		}
+		},
+		lsp_references = {
+			theme = "dropdown"
+		},
+		lsp_document_symbols = {
+			theme = "dropdown"
+		},
 	},
 	extensions = {
 		fzf = {

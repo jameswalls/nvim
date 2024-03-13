@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 		local telescope = require("telescope.builtin")
 		map('gd', telescope.lsp_definitions, '[G]oto [D]efinition')
-		map('gr', telescope.lsp_references, '[G]oto [R]eferences')
+		map('gr', function() telescope.lsp_references({ show_line = false }) end, '[G]oto [R]eferences')
 		map('gI', telescope.lsp_implementations, '[G]oto [I]mplementation')
 		map('<leader>D', telescope.lsp_type_definitions, 'Type [D]efinition')
 		map('<leader>ds', telescope.lsp_document_symbols, '[D]ocument [S]ymbols')
