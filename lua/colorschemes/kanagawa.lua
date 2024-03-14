@@ -21,6 +21,7 @@ require('kanagawa').setup({
 			Boolean = { fg = colors.theme.syn.constant, bold = false },
 			-- LineNr = { fg = colors.theme.ui.nontext, bg = colors.theme.ui.bg },
 			LineNr = { fg = colors.theme.ui.nontext, bg = "None" },
+			CursorLineNr = { fg = colors.theme.diag.warning, bg = "None", bold = true },
 			SignColumn = { fg = colors.theme.ui.special, bg = "None" },
 			GitSignsAdd = { fg = colors.theme.vcs.added, bg = "None" },
 			GitSignsChange = { fg = colors.theme.vcs.changed, bg = "None" },
