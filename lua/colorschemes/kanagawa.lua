@@ -26,7 +26,8 @@ require('kanagawa').setup({
 			GitSignsAdd = { fg = colors.theme.vcs.added, bg = "None" },
 			GitSignsChange = { fg = colors.theme.vcs.changed, bg = "None" },
 			GitSignsDelete = { fg = colors.theme.vcs.removed, bg = "None" },
-			TelescopeBorder = { bg = "None"}
+			TelescopeBorder = { bg = "None"},
+			ColorColumn = { bg = colors.theme.ui.bg_p1, blend = 50 }
 		}
     end,
     background = {               -- map the value of 'background' option to a theme
