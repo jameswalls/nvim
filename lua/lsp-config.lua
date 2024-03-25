@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		map('gd', telescope.lsp_definitions, '[G]oto [D]efinition')
 		map('gr', function() telescope.lsp_references({ show_line = false }) end, '[G]oto [R]eferences')
 		map('gI', telescope.lsp_implementations, '[G]oto [I]mplementation')
-		map('<leader>D', telescope.lsp_type_definitions, 'Type [D]efinition')
+		map('td', telescope.lsp_type_definitions, 'Type [D]efinition')
 		map('<leader>ds', telescope.lsp_document_symbols, '[D]ocument [S]ymbols')
 		map('<leader>ws', telescope.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 		map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
