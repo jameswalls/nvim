@@ -111,10 +111,12 @@ return require('packer').startup(
 		-- use 'christoomey/vim-tmux-navigator'
 
 		-- lualine
+		use "nvim-tree/nvim-web-devicons"
 		use {
 		  'nvim-lualine/lualine.nvim',
 		  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 		}
+
 
 		-- parenthesis
 		-- use 'HiPhish/rainbow-delimiters.nvim'
