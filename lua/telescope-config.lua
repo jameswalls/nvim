@@ -27,6 +27,9 @@ require('telescope').setup({
 		diagnostics = {
 			theme = "dropdown"
 		},
+		quickfix = {
+			theme = "dropdown"
+		},
 	},
 	extensions = {
 		fzf = {
@@ -54,5 +57,6 @@ vim.keymap.set('n', '<leader>dg', builtin.diagnostics)
 vim.keymap.set('n', '<leader>cc', builtin.commands)
 vim.keymap.set('n', '<leader>bb', builtin.buffers)
 vim.keymap.set('n', '<leader>cs', builtin.colorscheme)
+vim.keymap.set('n', '<leader>qf', builtin.quickfix)
 vim.keymap.set('n', '<leader>ss', function() builtin.current_buffer_fuzzy_find({fuzzy=false, case_mode="respect_case"})end)
 vim.keymap.set("n", "<leader>fg", extensions.live_grep_args.live_grep_args)
