@@ -139,6 +139,7 @@ return require('packer').startup(
 		use "ellisonleao/gruvbox.nvim"
 		use "aktersnurra/no-clown-fiesta.nvim"
 		use "rebelot/kanagawa.nvim"
+		use "jameswalls/naysayer.nvim"
 
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
