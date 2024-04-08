@@ -1,7 +1,7 @@
 require("nord").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
-  transparent = true, -- Enable this to disable setting the background color
+  transparent = false, -- Enable this to disable setting the background color
   terminal_colors = false, -- Configure the colors used when opening a `:terminal` in Neovim
   diff = { mode = "bg" }, -- enables/disables colorful backgrounds when used in diff mode. values : [bg|fg]
   borders = true, -- Enable the border between verticaly split windows visible
@@ -66,13 +66,13 @@ require("nord").setup({
 
   on_highlights = function(hi, c)
 	-- hi["@conditional"] = { fg = c.aurora.purple }
-	hi["@boolean"] = { fg = c.frost.artic_ocean }
-	hi["@constant.builtin"] = { fg = c.frost.artic_ocean }
-	-- hi["@spell"] = { fg = c.polar_night.nord3 }
-	hi["@spell"] = { fg = c.polar_night.light }
-	hi["@string.documentation"] = { fg = c.polar_night.nord3 }
-	hi["@type.builtin"] = { fg = c.polar_night.nord3 }
-	hi["@string"] = { fg = c.frost.polar_water }
+	-- hi["@boolean"] = { fg = c.frost.artic_ocean }
+	-- hi["@constant.builtin"] = { fg = c.frost.artic_ocean }
+	-- -- hi["@spell"] = { fg = c.polar_night.nord3 }
+	-- hi["@spell"] = { fg = c.polar_night.light }
+	-- hi["@string.documentation"] = { fg = c.polar_night.nord3 }
+	-- hi["@type.builtin"] = { fg = c.polar_night.nord3 }
+	-- hi["@string"] = { fg = c.frost.polar_water }
 	-- hi["@field"] = { fg = c.frost.artic_water }
 	-- hi["@function"] = { fg = c.frost.polar_water }
 	-- hi["@function.call"] = { fg = c.frost.artic_water }
