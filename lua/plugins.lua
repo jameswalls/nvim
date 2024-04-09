@@ -62,12 +62,11 @@ return require('packer').startup(
 			requires = { {'nvim-lua/plenary.nvim'} }
 		}
 		use "nvim-telescope/telescope-live-grep-args.nvim"
-
 		use {
 			"ThePrimeagen/harpoon",
-			requires = { { "nvim-lua/plenary.nvim" } }
+			branch = "harpoon2",
+			requires = { {"nvim-lua/plenary.nvim"} }
 		}
-		use 'folke/todo-comments.nvim'
 		----------------------------------------------------------------------
 		-- lsp
 		----------------------------------------------------------------------
