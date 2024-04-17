@@ -38,6 +38,7 @@ require("naysayer").setup({
         nvimtree = true,
         treesitter = true,
         notify = false,
+		telescope = true,
         mini = {
             enabled = true,
             indentscope_color = "",
