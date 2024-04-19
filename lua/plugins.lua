@@ -124,6 +124,7 @@ return require('packer').startup(
 		use { "windwp/nvim-autopairs" }
 
 		-- colorschemes
+		use "rktjmp/lush.nvim"
 		use { "catppuccin/nvim", as = "catppuccin" }
 		use 'gbprod/nord.nvim'
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
