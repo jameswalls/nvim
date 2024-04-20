@@ -17,10 +17,10 @@ require("naysayer").setup({
     no_underline = false, -- Force no underline
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
         comments = {},
-        conditionals = { "bold" },
-        loops = { "bold" },
+        conditionals = {},
+        loops = {},
         functions = {},
-        keywords = { "bold" },
+        keywords = {},
         strings = {},
         variables = {},
         numbers = {},

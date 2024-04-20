@@ -32,9 +32,6 @@ vim.opt.guicursor = ''
 vim.opt.cursorlineopt = "number"
 vim.opt.hlsearch = false
 
--- set termguicolors
--- vim.opt.background = 'dark'
-vim.highlight.priorities.semantic_tokens = 95
 
 -- nvim-tree
 vim.opt.termguicolors = true
