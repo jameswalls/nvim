@@ -28,7 +28,7 @@ vim.keymap.set('i', 'jk', '<Esc>')
 
 -- editor
 vim.opt.cursorline = true
-vim.opt.guicursor = ''
+vim.opt.guicursor = "a:block-Cursor"
 vim.opt.cursorlineopt = "number"
 vim.opt.hlsearch = false
 
