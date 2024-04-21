@@ -29,9 +29,6 @@ local cmp_kinds = {
 
 -- Global setup.
 cmp.setup({
-	completion = {
-		completeopt = "menu,menuone,noinsert"
-	},
 	snippet = {
 		expand = function(args)
 			require('luasnip').lsp_expand(args.body)
@@ -47,6 +44,8 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
 		['<C-d>'] = cmp.mapping.scroll_docs(4),
+		['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+		['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 		['<C-Space>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert}),
 	}),
