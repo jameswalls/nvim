@@ -42,9 +42,7 @@ cmp.setup({
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
-		documentation = {
-			max_width = 0
-		},
+		documentation = cmp.config.window.bordered()
 	},
 	mapping = cmp.mapping.preset.insert({
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
