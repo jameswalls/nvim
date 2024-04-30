@@ -9,27 +9,30 @@ require('telescope').setup({
 	},
 	pickers = {
 		find_files = {
-			theme = "dropdown"
+			theme = "ivy"
 		},
 		colorscheme = {
 			enable_preview = true
 		},
 		current_buffer_fuzzy_find = {
-			theme = "dropdown",
-			previewer = false
+			theme = "ivy",
+			previewer = true
 		},
 		lsp_references = {
-			theme = "dropdown"
+			theme = "ivy"
 		},
 		lsp_document_symbols = {
-			theme = "dropdown"
+			theme = "ivy"
 		},
 		diagnostics = {
-			theme = "dropdown"
+			theme = "ivy"
 		},
 		quickfix = {
-			theme = "dropdown"
+			theme = "ivy"
 		},
+		grep_string = {
+			theme = "ivy"
+		}
 	},
 	extensions = {
 		fzf = {
@@ -40,7 +43,7 @@ require('telescope').setup({
 		},
 		live_grep_args = {
 			auto_quoting = true,
-			theme = "dropdown",
+			theme = "ivy",
 			previewer = false
 		}
 	}
