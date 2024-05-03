@@ -1,7 +1,7 @@
 -- Lua
 require('onedark').setup  {
     -- Main options --
-    style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = true,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
     ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
@@ -29,7 +29,19 @@ require('onedark').setup  {
 
     -- Custom Highlights --
     colors = {}, -- Override default colors
-    highlights = {}, -- Override highlight groups
+    highlights = {
+		["@type"] = { fg = "$cyan" },
+		["@type.builtin"] = { fg = "$cyan" },
+		["@operator"] = { fg = "$cyan" },
+		["@constructor"] = { fg = "$blue", fmt = "none" },
+		["@variable.builtin"] = { fg = "$fg" },
+		["@variable.member"] = { fg = "$red" },
+		["@variable.parameter"] = { fg = "$fg" },
+		["@constant.builtin"] = { fg = "$yellow" },
+		["@constant"] = { fg = "$yellow" },
+		["@boolean"] = { fg = "$yellow" },
+		["@number"] = { fg = "$yellow" },
+	}, -- Override highlight groups
 
     -- Plugins Config --
     diagnostics = {
