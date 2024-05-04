@@ -83,11 +83,26 @@ vim.list_extend(ensure_installed, {
 
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+local border = {
+      {"┌", "FloatBorder"},
+      {"─", "FloatBorder"},
+      {"┐", "FloatBorder"},
+      {"│", "FloatBorder"},
+      {"┘", "FloatBorder"},
+      {"─", "FloatBorder"},
+      {"└", "FloatBorder"},
+      {"│", "FloatBorder"},
+}
+
 require('mason-lspconfig').setup {
 	handlers = {
 		function(server_name)
 			local server = servers[server_name] or {}
 			server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+			server.handlers = {
+				["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
+				["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
+			}
 			require('lspconfig')[server_name].setup(server)
 		end,
 	},

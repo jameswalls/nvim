@@ -35,12 +35,15 @@ require('onedark').setup  {
 		["@operator"] = { fg = "$cyan" },
 		["@constructor"] = { fg = "$blue", fmt = "none" },
 		["@variable.builtin"] = { fg = "$fg" },
-		["@variable.member"] = { fg = "$red" },
+		["@variable.member"] = { fg = "$fg" },
 		["@variable.parameter"] = { fg = "$fg" },
 		["@constant.builtin"] = { fg = "$yellow" },
 		["@constant"] = { fg = "$yellow" },
 		["@boolean"] = { fg = "$yellow" },
 		["@number"] = { fg = "$yellow" },
+		["FloatBorder"] = { fg = "$yellow", bg = "$none" },
+		["NormalFloat"] = { fg = "$yellow", bg = "$none" },
+		["CursorLineNr"] = { fg = "$yellow" },
 	}, -- Override highlight groups
 
     -- Plugins Config --
