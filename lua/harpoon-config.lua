@@ -1,6 +1,11 @@
 local harpoon = require("harpoon")
 local nav_opts = { ui_nav_wrap = true}
-harpoon:setup()
+harpoon:setup({
+	settings = {
+		save_on_toggle = true,
+		sync_on_ui_close = true,
+	}
+})
 
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
 vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
