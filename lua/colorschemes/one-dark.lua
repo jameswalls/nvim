@@ -30,20 +30,25 @@ require('onedark').setup  {
     -- Custom Highlights --
     colors = {}, -- Override default colors
     highlights = {
+		["@boolean"] = { fg = "$yellow" },
+		["@constant"] = { fg = "$yellow" },
+		["@constant.builtin"] = { fg = "$yellow" },
+		["@constructor"] = { fg = "$blue", fmt = "none" },
+		["@function.macro"] = { fg = "$blue" },
+		["@module"] = { fg = "$fg" },
+		["@number"] = { fg = "$yellow" },
+		["@operator"] = { fg = "$cyan" },
+		["@preproc"] = { fg = "$fg" },
+		["@punctuation.special"] = { fg = "$fg" },
+		["@string.escape"] = { fg = "$yellow" },
 		["@type"] = { fg = "$cyan" },
 		["@type.builtin"] = { fg = "$cyan" },
-		["@operator"] = { fg = "$cyan" },
-		["@constructor"] = { fg = "$blue", fmt = "none" },
 		["@variable.builtin"] = { fg = "$fg" },
 		["@variable.member"] = { fg = "$fg" },
 		["@variable.parameter"] = { fg = "$fg" },
-		["@constant.builtin"] = { fg = "$yellow" },
-		["@constant"] = { fg = "$yellow" },
-		["@boolean"] = { fg = "$yellow" },
-		["@number"] = { fg = "$yellow" },
+		["CursorLineNr"] = { fg = "$yellow" },
 		["FloatBorder"] = { fg = "$yellow", bg = "$none" },
 		["NormalFloat"] = { fg = "$yellow", bg = "$none" },
-		["CursorLineNr"] = { fg = "$yellow" },
 	}, -- Override highlight groups
 
     -- Plugins Config --
