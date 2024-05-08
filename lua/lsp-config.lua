@@ -107,3 +107,5 @@ require('mason-lspconfig').setup {
 		end,
 	},
 }
+
+require('fidget').setup({})

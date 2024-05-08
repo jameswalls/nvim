@@ -70,6 +70,9 @@ return require('packer').startup(
 		----------------------------------------------------------------------
 		-- lsp
 		----------------------------------------------------------------------
+		-- status
+		use "j-hui/fidget.nvim"
+
 		-- mason
 		use {
 			"williamboman/mason.nvim",
