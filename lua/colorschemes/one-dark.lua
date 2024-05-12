@@ -35,6 +35,7 @@ require('onedark').setup  {
 		["@constant.builtin"] = { fg = "$yellow" },
 		["@constructor"] = { fg = "$blue", fmt = "none" },
 		["@function.macro"] = { fg = "$blue" },
+		["@keyword.directive"] = { fg = "$fg" },
 		["@module"] = { fg = "$fg" },
 		["@number"] = { fg = "$yellow" },
 		["@operator"] = { fg = "$cyan" },
