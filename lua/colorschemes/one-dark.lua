@@ -49,6 +49,7 @@ require('onedark').setup  {
 		["CursorLineNr"] = { fg = "$yellow" },
 		["FloatBorder"] = { fg = "$yellow", bg = "$none" },
 		["NormalFloat"] = { fg = "$yellow", bg = "$none" },
+		["LspSignatureActiveParameter"] = { fg = "$purple"}
 	}, -- Override highlight groups
 
     -- Plugins Config --
