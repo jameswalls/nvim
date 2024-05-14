@@ -111,6 +111,7 @@ return require('packer').startup(
 		-- use 'christoomey/vim-tmux-navigator'
 
 		-- lualine
+		use "nvim-tree/nvim-tree.lua"
 		use "nvim-tree/nvim-web-devicons"
 		use {
 		  'nvim-lualine/lualine.nvim',

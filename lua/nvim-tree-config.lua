@@ -1,5 +1,4 @@
-
-require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
+require("nvim-tree").setup {
       auto_reload_on_write = true,
       disable_netrw = true,
       hijack_cursor = true,
@@ -230,7 +229,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           watcher = false,
         },
       },
-} -- END_DEFAULT_OPTS
+}
 
 vim.keymap.set('n', '<leader>tt', '<cmd>NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>cf', '<cmd>NvimTreeFindFile<cr>')

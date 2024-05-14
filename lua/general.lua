@@ -34,14 +34,17 @@ vim.opt.hlsearch = false
 
 
 -- nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
-vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
-vim.g.netrw_banner = false
-vim.g.netrw_hide = 1
-vim.cmd([[
-    let g:netrw_list_hide = netrw_gitignore#Hide() .. '\(^\|\s\s\)\zs\.\S\+'
-]])
-vim.keymap.set("n", "<leader>tt", ':Explore<Cr>')
+-- vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+-- vim.g.netrw_banner = false
+-- vim.g.netrw_hide = 1
+-- vim.cmd([[
+--     let g:netrw_list_hide = netrw_gitignore#Hide() .. '\(^\|\s\s\)\zs\.\S\+'
+-- ]])
+-- vim.keymap.set("n", "<leader>tt", ':Rexplore<Cr>')
+-- vim.keymap.set("n", "<leader>cf", ':Explore<Cr>')
 
 -- quickfix list
 vim.keymap.set("n", "<leader>]", ":cnext <Cr>")
