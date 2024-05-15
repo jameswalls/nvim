@@ -37,6 +37,9 @@ cmp.setup({
 	view = {
 		entries = { "custom" },
 	},
+	completion = {
+		completeopt = "menu,menuone,preview"
+	},
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered()
