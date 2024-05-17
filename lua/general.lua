@@ -31,6 +31,7 @@ vim.opt.cursorline = true
 vim.opt.guicursor = "a:block-Cursor"
 vim.opt.cursorlineopt = "number"
 vim.opt.hlsearch = false
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 
 
 -- nvim-tree
