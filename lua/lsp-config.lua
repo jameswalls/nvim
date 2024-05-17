@@ -83,13 +83,13 @@ vim.list_extend(ensure_installed, {
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
 local border = {
-      {"┌", "FloatBorder"},
+      {"╭", "FloatBorder"},
       {"─", "FloatBorder"},
-      {"┐", "FloatBorder"},
+      {"╮", "FloatBorder"},
       {"│", "FloatBorder"},
-      {"┘", "FloatBorder"},
+      {"╯", "FloatBorder"},
       {"─", "FloatBorder"},
-      {"└", "FloatBorder"},
+      {"╰", "FloatBorder"},
       {"│", "FloatBorder"},
 }
 
