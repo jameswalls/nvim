@@ -4,11 +4,8 @@ local extensions = require("Telescope").extensions
 
 require('telescope').setup({
 	defaults = {
-		wrap_results = true,
-		path_display = function(opts, path)
-			local tail = require("telescope.utils").path_tail(path)
-			return string.format("%s (%s)", tail, path)
-		end,
+		wrap_results = false,
+		path_display = { "truncate" },
 	},
 	extensions = {
 		fzf = {
