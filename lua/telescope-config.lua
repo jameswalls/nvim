@@ -4,35 +4,11 @@ local extensions = require("Telescope").extensions
 
 require('telescope').setup({
 	defaults = {
-		wrap_results = false,
-		path_display = { "truncate" },
-	},
-	pickers = {
-		find_files = {
-			theme = "ivy"
-		},
-		colorscheme = {
-			enable_preview = true
-		},
-		current_buffer_fuzzy_find = {
-			theme = "ivy",
-			previewer = true
-		},
-		lsp_references = {
-			theme = "ivy"
-		},
-		lsp_document_symbols = {
-			theme = "ivy"
-		},
-		diagnostics = {
-			theme = "ivy"
-		},
-		quickfix = {
-			theme = "ivy"
-		},
-		grep_string = {
-			theme = "ivy"
-		}
+		wrap_results = true,
+		path_display = function(opts, path)
+			local tail = require("telescope.utils").path_tail(path)
+			return string.format("%s (%s)", tail, path)
+		end,
 	},
 	extensions = {
 		fzf = {
@@ -43,7 +19,6 @@ require('telescope').setup({
 		},
 		live_grep_args = {
 			auto_quoting = true,
-			theme = "ivy",
 			previewer = false
 		}
 	}
