@@ -3,6 +3,8 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set("n", "<leader>]", ":cnext <Cr>")
+vim.keymap.set("n", "<leader>[", ":cprev <Cr>")
 
 vim.opt.ts = 4
 vim.opt.sw = 4
@@ -24,6 +26,8 @@ vim.opt.scrolloff = 10
 vim.opt.guicursor = "a:block-Cursor"
 vim.opt.wrap = false
 vim.opt.hlsearch = false
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",
