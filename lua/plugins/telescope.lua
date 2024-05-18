@@ -1,0 +1,44 @@
+return {
+	"nvim-telescope/telescope.nvim",
+	dependencies = {
+		{ "nvim-lua/plenary.nvim" },
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
+		{ "nvim-telescope/telescope-live-grep-args.nvim" }
+	},
+	config = function()
+		require('telescope').setup({
+			defaults = {
+				wrap_results = false,
+				path_display = { "truncate" },
+			},
+			extensions = {
+				fzf = {
+					fuzzy = true,
+					override_generic_sorter = true,
+					override_file_sorter = true,
+					case_mode = "smart_case",
+				},
+				live_grep_args = {
+					auto_quoting = true,
+					previewer = false
+				}
+			}
+		})
+
+		require("telescope").load_extension("fzf")
+
+		local builtin = require("telescope.builtin")
+		local extensions = require("telescope").extensions
+
+		vim.keymap.set('n', '<leader>ff', builtin.find_files)
+		vim.keymap.set('n', '<leader>fh', builtin.help_tags)
+		vim.keymap.set('n', '<leader>gs', builtin.grep_string)
+		vim.keymap.set('n', '<leader>dg', builtin.diagnostics)
+		vim.keymap.set('n', '<leader>cc', builtin.commands)
+		vim.keymap.set('n', '<leader>bb', builtin.buffers)
+		vim.keymap.set('n', '<leader>cs', builtin.colorscheme)
+		vim.keymap.set('n', '<leader>qf', builtin.quickfix)
+		vim.keymap.set('n', '<leader>ss', function() builtin.current_buffer_fuzzy_find({fuzzy=true, case_mode="ignore_case"})end)
+		vim.keymap.set("n", "<leader>fg", extensions.live_grep_args.live_grep_args)
+	end
+}
