@@ -22,6 +22,7 @@ vim.opt.splitbelow = true
 vim.opt.inccommand = 'split'
 vim.opt.scrolloff = 10
 vim.opt.guicursor = "a:block-Cursor"
+vim.opt.wrap = false
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",
