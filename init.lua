@@ -5,6 +5,7 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 
 vim.opt.ts = 4
+vim.opt.sw = 4
 vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -20,6 +21,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.inccommand = 'split'
 vim.opt.scrolloff = 10
+vim.opt.guicursor = "a:block-Cursor"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",
