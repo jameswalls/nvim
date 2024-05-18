@@ -6,6 +6,8 @@ vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set("n", "<leader>]", ":cnext <Cr>")
 vim.keymap.set("n", "<leader>[", ":cprev <Cr>")
 
+vim.cmd([[au FileType * set fo-=c fo-=r fo-=o]])
+
 vim.opt.ts = 4
 vim.opt.sw = 4
 vim.g.have_nerd_font = true
@@ -26,6 +28,7 @@ vim.opt.scrolloff = 10
 vim.opt.guicursor = "a:block-Cursor"
 vim.opt.wrap = false
 vim.opt.hlsearch = false
+vim.opt.termguicolors = true
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
