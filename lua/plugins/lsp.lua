@@ -4,7 +4,19 @@ return {
 		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		{ "j-hui/fidget.nvim", opts = {} },
+		{
+			"j-hui/fidget.nvim",
+			opts = {
+				notification = {
+					window = {
+						winblend = 0,
+						max_width = 50,
+						max_height = 5,
+						align = "top"
+					}
+				}
+			}
+		},
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
