@@ -70,6 +70,28 @@ return {
 					},
 				},
 			},
+			pylsp = {
+				settings = {
+					pylsp = {
+						configurationSources = {"flake8"},
+						plugins = {
+							pycodestyle = {
+								ignore = { "E501" },
+								flake8 = {
+									enabled = true,
+									exclude = { "*/.ipynb_checkpoints/*" },
+									ignore = { "E722", "E501"},
+								}
+							},
+							jedi_completion = {
+								enabled = true,
+								include_function_objects = false,
+								include_class_objects = false,
+							}
+						}
+					}
+				}
+			}
 		}
 
 		require("mason").setup()
