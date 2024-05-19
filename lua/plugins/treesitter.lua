@@ -33,9 +33,9 @@ return {
 						["rs"] = "@assignment.rhs",
 					},
 					selection_modes = {
-						['@parameter.outer'] = 'v', -- charwise
-						['@function.outer'] = 'V', -- linewise
-						['@class.outer'] = '<c-v>', -- blockwise
+						["@parameter.outer"] = "v", -- charwise
+						["@function.outer"] = "V", -- linewise
+						["@class.outer"] = "<c-v>", -- blockwise
 					},
 					include_surrounding_whitespace = false,
 				},
