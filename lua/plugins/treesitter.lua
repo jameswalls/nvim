@@ -21,13 +21,14 @@ return {
 						["ac"] = "@class.outer",
 						["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
 						["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+						["rs"] = "@assignment.rhs",
 					},
 					selection_modes = {
 						['@parameter.outer'] = 'v', -- charwise
 						['@function.outer'] = 'V', -- linewise
 						['@class.outer'] = '<c-v>', -- blockwise
 					},
-					include_surrounding_whitespace = true,
+					include_surrounding_whitespace = false,
 				},
 				move = {
 					enable = true,
