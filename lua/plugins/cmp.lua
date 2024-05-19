@@ -45,6 +45,14 @@ return {
 			TypeParameter = "",
 		}
 
+		local cmp_menus = {
+			buffer = "[Buffer]",
+			nvim_lsp = "[LSP]",
+			luasnip = "[LuaSnip]",
+			nvim_lua = "[Lua]",
+			latex_symbols = "[LaTeX]",
+		}
+
 		cmp.setup({
 			snippet = {
 				expand = function(args)
@@ -70,10 +78,10 @@ return {
 				["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert}),
 			}),
 			formatting = {
-				fields = { "kind", "abbr" },
-				format = function(_, vim_item)
+				fields = { "kind", "abbr", "menu" },
+				format = function(entry, vim_item)
 					vim_item.kind = cmp_kinds[vim_item.kind] or " "
-					vim_item.menu = ""
+					vim_item.menu = cmp_menus[entry.source.name]
 					return vim_item
 				end,
 			},
