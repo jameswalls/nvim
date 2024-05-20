@@ -29,6 +29,8 @@ vim.opt.guicursor = "a:block-Cursor"
 vim.opt.wrap = false
 vim.opt.hlsearch = false
 vim.opt.termguicolors = true
+vim.opt.cursorlineopt = "number"
+vim.opt.cursorline = true
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
