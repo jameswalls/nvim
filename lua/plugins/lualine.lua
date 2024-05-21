@@ -30,9 +30,9 @@ return {
 			},
 			sections = {
 				lualine_a = {"mode"},
-				lualine_b = {"branch", "diff", "diagnostics"},
-				lualine_c = {{"filename", path=4}},
-				lualine_x = {"filetype"},
+				lualine_b = {{ "branch", fmt = function(str) return str:sub(1,30) end}, "diff" },
+				lualine_c = {{ "filename", path=4 }},
+				lualine_x = { "diagnostics" },
 				lualine_y = {"progress"},
 				lualine_z = {"location"}
 			},
