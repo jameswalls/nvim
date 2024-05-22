@@ -26,19 +26,23 @@ return {
 				local map = function(keys, func, desc)
 					vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 				end
-				map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-				map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-				map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-				map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-				map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
-				map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+				local telescope = require("telescope.builtin")
+				map("gd", telescope.lsp_definitions, "[G]oto [D]efinition")
+				map("gr", telescope.lsp_references, "[G]oto [R]eferences")
+				map("gI", telescope.lsp_implementations, "[G]oto [I]mplementation")
+				map("<leader>D", telescope.lsp_type_definitions, "Type [D]efinition")
+				map("<leader>ds", telescope.lsp_document_symbols, "[D]ocument [S]ymbols")
+				map("<leader>ws", telescope.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
 				map("H", vim.lsp.buf.signature_help, "Signature [H]elp")
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-				map("E", vim.diagnostic.open_float, "Diagnostic float")
-				map("<leader>e", vim.diagnostic.setqflist, "Add all diagnostics to qfixlist")
+				map("<leader>e", vim.diagnostic.open_float, "Diagnostic float")
+				map("<leader>q", vim.diagnostic.setloclist, "Add all diagnostics to qfixlist")
+				map("[d", vim.diagnostic.goto_prev, "Go to previous [D]iagnostic message")
+				map("]d", vim.diagnostic.goto_next, "Go to next [D]iagnostic message")
+
 			end,
 		})
 
@@ -95,27 +99,11 @@ return {
 
 		require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
-		local border = {
-			{"╭", "FloatBorder"},
-			{"─", "FloatBorder"},
-			{"╮", "FloatBorder"},
-			{"│", "FloatBorder"},
-			{"╯", "FloatBorder"},
-			{"─", "FloatBorder"},
-			{"╰", "FloatBorder"},
-			{"│", "FloatBorder"},
-		}
-
 		require("mason-lspconfig").setup({
 			handlers = {
 				function(server_name)
 					local server = servers[server_name] or {}
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-
-					server.handlers = {
-						["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
-						["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
-					}
 					require("lspconfig")[server_name].setup(server)
 				end,
 			},
