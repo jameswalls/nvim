@@ -13,7 +13,6 @@ return {
 						".env*",
 						".zshrc",
 						".bashrc",
-						"*.yaml"
 					},
 					cloak_pattern ={ "=.+", ":.+" },
 					replace = nil,
