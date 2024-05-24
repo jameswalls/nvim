@@ -3,10 +3,10 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "]q", ":lnext <Cr>")
-vim.keymap.set("n", "[q", ":lprev <Cr>")
-vim.keymap.set("n", "]c", ":cnext <Cr>")
-vim.keymap.set("n", "[c", ":cprev <Cr>")
+vim.keymap.set("n", "<leader>]", ":lnext <Cr>")
+vim.keymap.set("n", "<leader>[", ":lprev <Cr>")
+vim.keymap.set("n", "]q", ":cnext <Cr>")
+vim.keymap.set("n", "[q", ":cprev <Cr>")
 
 vim.cmd([[au FileType * set fo-=c fo-=r fo-=o]])
 
@@ -35,7 +35,7 @@ vim.opt.cursorlineopt = "number"
 vim.opt.cursorline = true
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",
