@@ -7,14 +7,12 @@ return {
 		{
 			"j-hui/fidget.nvim",
 			opts = {
-				notification = {
-					window = {
-						winblend = 0,
-						max_width = 50,
-						max_height = 5,
-						align = "top"
+				progress = {
+					suppress_on_insert = true,
+					display = {
+						done_ttl = 1,
 					}
-				}
+				},
 			}
 		},
 		{ "folke/neodev.nvim", opts = {} },
