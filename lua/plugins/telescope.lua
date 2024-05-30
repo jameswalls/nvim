@@ -41,5 +41,7 @@ return {
 		vim.keymap.set("n", "<leader>qf", builtin.quickfix)
 		vim.keymap.set("n", "<leader>ss", function() builtin.current_buffer_fuzzy_find({fuzzy=true, case_mode="ignore_case"})end)
 		vim.keymap.set("n", "<leader>fg", extensions.live_grep_args.live_grep_args)
+
+		require("telescope").load_extension("live_grep_args")
 	end
 }
