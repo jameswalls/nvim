@@ -35,7 +35,6 @@ vim.opt.cursorlineopt = "number"
 vim.opt.cursorline = true
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",
