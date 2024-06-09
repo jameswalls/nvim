@@ -6,6 +6,7 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		{
 			"j-hui/fidget.nvim",
+			enabled = false,
 			opts = {
 				progress = {
 					suppress_on_insert = true,
