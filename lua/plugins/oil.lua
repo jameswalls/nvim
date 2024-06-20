@@ -9,7 +9,8 @@ return {
 				natural_order = false,
 			},
 			keymaps = {
-				["<C-p>"] = function() oil.open_preview({ horizontal=true }) end
+				["<C-p>"] = function() oil.open_preview({ horizontal=true }) end,
+				["g."] = "actions.toggle_hidden",
 			}
 		})
 
