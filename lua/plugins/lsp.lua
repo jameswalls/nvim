@@ -6,14 +6,19 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		{
 			"j-hui/fidget.nvim",
-			enabled = false,
+			enabled = true,
 			opts = {
 				progress = {
 					suppress_on_insert = true,
 					display = {
-						done_ttl = 1,
+						render_limit = 1,
 					}
 				},
+				notification = {
+					window = {
+						winblend = 0
+					}
+				}
 			}
 		},
 		{ "folke/neodev.nvim", opts = {} },
