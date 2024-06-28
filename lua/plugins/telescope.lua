@@ -34,7 +34,7 @@ return {
 		vim.keymap.set("n", "<leader>ff", builtin.find_files)
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags)
 		vim.keymap.set("n", "<leader>gs", builtin.grep_string)
-		vim.keymap.set("n", "<leader>dg", function() builtin.diagnostics({bufnr=0}) end)
+		vim.keymap.set("n", "<leader>dg", builtin.diagnostics)
 		vim.keymap.set("n", "<leader>cc", builtin.commands)
 		vim.keymap.set("n", "<leader>bb", builtin.buffers)
 		vim.keymap.set("n", "<leader>cs", builtin.colorscheme)
